@@ -1,0 +1,304 @@
+namespace FJH.API.LPCustom;
+
+using Microsoft.Assembly.Document;
+using System.Reflection;
+using Microsoft.Inventory.BOM;
+using Microsoft.Inventory.Item;
+using Microsoft.Projects.Resources.Resource;
+
+page 50110 "APILP - Assembly Order Lines"
+{
+    APIGroup = 'LPCustom';
+    APIPublisher = 'LP';
+    ApplicationArea = All;
+    Caption = 'LPAssemblyOrderLines';
+    DelayedInsert = true;
+    PageType = API;
+    APIVersion = 'v2.0';
+    EntityCaption = 'LP Assembly Order Line';
+    EntitySetCaption = 'LP Assembly Order Lines';
+    ODataKeyFields = SystemId;
+    EntityName = 'LPAssemblyOrderLine';
+    EntitySetName = 'LPAssemblyOrderLines';
+    SourceTable = "APILP - Assembly Line Aggreg.";
+    Extensible = false;
+
+    layout
+    {
+        area(Content)
+        {
+            repeater(General)
+            {
+                ShowCaption = false;
+                field(id; Rec.SystemId)
+                {
+                    Caption = 'Id';
+                    Editable = false;
+                }
+                field(documentId; Rec."Document Id")
+                {
+                    Caption = 'Document Id';
+
+                    trigger OnValidate()
+                    begin
+                        if (not IsNullGuid(xRec."Document Id")) and (xRec."Document Id" <> Rec."Document Id") then
+                            Error(CannotChangeDocumentIdNoErr);
+                    end;
+                }
+                field(sequence; Rec."Line No.")
+                {
+                    Caption = 'Sequence';
+
+                    trigger OnValidate()
+                    begin
+                        if (xRec."Line No." <> Rec."Line No.") and
+                           (xRec."Line No." <> 0)
+                        then
+                            Error(CannotChangeLineNoErr);
+
+                        RegisterFieldSet(Rec.FieldNo("Line No."));
+                    end;
+                }
+                field(itemId; Rec."Item Id")
+                {
+                    Caption = 'Item Id';
+
+                    trigger OnValidate()
+                    begin
+                        if not Item.GetBySystemId(Rec."Item Id") then
+                            Error(ItemDoesNotExistErr);
+
+                        RegisterFieldSet(Rec.FieldNo(Type));
+                        RegisterFieldSet(Rec.FieldNo("No."));
+                        RegisterFieldSet(Rec.FieldNo("Item Id"));
+
+                        Rec."No." := Item."No.";
+                    end;
+                }
+                field(resourceId; Rec."Resource Id")
+                {
+                    Caption = 'Resource Id';
+
+                    trigger OnValidate()
+                    begin
+                        if not Resource.GetBySystemId(Rec."Resource Id") then
+                            Error(ResourceDoesNotExistErr);
+
+                        RegisterFieldSet(Rec.FieldNo(Type));
+                        RegisterFieldSet(Rec.FieldNo("No."));
+                        RegisterFieldSet(Rec.FieldNo("Resource Id"));
+
+                        Rec."No." := Resource."No.";
+                    end;
+                }
+                field(lineType; Rec.Type)
+                {
+                    Caption = 'Line Type';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo(Type));
+                    end;
+                }
+                field(lineObjectNumber; Rec."No.")
+                {
+                    Caption = 'Line Object No.';
+
+                    trigger OnValidate()
+                    begin
+                        if (xRec."No." <> Rec."No.") and (xRec."No." <> '') then
+                            Error(CannotChangeLineObjectNoErr);
+
+                        case Rec.Type of
+                            Rec.Type::Item:
+                                begin
+                                    if not Item.Get(Rec."No.") then
+                                        Error(ItemDoesNotExistErr);
+
+                                    RegisterFieldSet(Rec.FieldNo("Item Id"));
+                                    Rec."Item Id" := Item.SystemId;
+                                end;
+                            Rec.Type::Resource:
+                                begin
+                                    if not Resource.Get(Rec."No.") then
+                                        Error(ResourceDoesNotExistErr);
+
+                                    RegisterFieldSet(Rec.FieldNo("Resource Id"));
+                                    Rec."Resource Id" := Resource.SystemId;
+                                end;
+                        end;
+                        RegisterFieldSet(Rec.FieldNo("No."));
+                    end;
+                }
+                field(Description; Rec.Description)
+                {
+                    Caption = 'Description';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo(Description));
+                    end;
+                }
+                field(Description2; Rec."Description 2")
+                {
+                    Caption = 'Description 2';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Description 2"));
+                    end;
+                }
+                field(variantCode; Rec."Variant Code")
+                {
+                    Caption = 'Variant Code';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Variant Code"));
+                    end;
+                }
+                field(locationCode; Rec."Location Code")
+                {
+                    Caption = 'Location Code';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Location Code"));
+                    end;
+                }
+                field(unitofMeasureCode; Rec."Unit of Measure Code")
+                {
+                    Caption = 'Unit of Measure Code';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Unit of Measure Code"));
+                    end;
+                }
+                field(quantityPer; Rec."Quantity per")
+                {
+                    Caption = 'Quantity Per';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Quantity Per"));
+                    end;
+                }
+                field(quantity; Rec.Quantity)
+                {
+                    Caption = 'Quantity';
+                    Editable = false;
+                }
+                field(qtyPerUnitofMeasure; Rec."Qty. per Unit of Measure")
+                {
+                    Caption = 'Qty. per Unit of Measure';
+                    Editable = false;
+                }
+                field(unitCost; Rec."Unit Cost")
+                {
+                    Caption = 'Unit Cost';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Quantity Per"));
+                    end;
+                }
+            }
+        }
+    }
+
+    trigger OnDeleteRecord(): Boolean
+    var
+        MgtAssemblyLinesAggregate: Codeunit "APILP  Mgt - Assembly Lines Ag";
+    begin
+        MgtAssemblyLinesAggregate.PropagateDeleteLine(Rec);
+    end;
+
+    trigger OnFindRecord(Which: Text): Boolean
+    var
+        //GraphMgtSalesOrderBuffer: Codeunit "Graph Mgt - Sales Order Buffer";
+        //GraphMgtSalesInvLines: Codeunit "Graph Mgt - Sales Inv. Lines";
+        MgtAssemblyLinesAggregate: Codeunit "APILP  Mgt - Assembly Lines Ag";
+        SysId: Guid;
+        DocumentIdFilter: Text;
+        IdFilter: Text;
+        FilterView: Text;
+    begin
+        if not LinesLoaded then begin
+            FilterView := Rec.GetView();
+            IdFilter := Rec.GetFilter(SystemId);
+            DocumentIdFilter := Rec.GetFilter("Document Id");
+            if (IdFilter = '') and (DocumentIdFilter = '') then
+                Error(IDOrDocumentIdShouldBeSpecifiedForLinesErr);
+            if IdFilter <> '' then begin
+                Evaluate(SysId, IdFilter);
+                DocumentIdFilter := MgtAssemblyLinesAggregate.GetSalesOrderDocumentIdFilterFromSystemId(SysId);
+            end else
+                DocumentIdFilter := Rec.GetFilter("Document Id");
+            //GraphMgtSalesOrderBuffer.LoadLines(Rec, DocumentIdFilter);
+            MgtAssemblyLinesAggregate.LoadLines(Rec, DocumentIdFilter);
+            Rec.SetView(FilterView);
+            if not Rec.FindFirst() then
+                exit(false);
+            LinesLoaded := true;
+        end;
+
+        exit(true);
+    end;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    var
+        MgtAssemblyLinesAggregate: Codeunit "APILP  Mgt - Assembly Lines Ag";
+    begin
+        MgtAssemblyLinesAggregate.PropagateInsertLine(Rec, TempFieldBuffer);
+    end;
+
+    trigger OnModifyRecord(): Boolean
+    var
+        MgtAssemblyLinesAggregate: Codeunit "APILP  Mgt - Assembly Lines Ag";
+    begin
+        MgtAssemblyLinesAggregate.PropagateModifyLine(Rec, TempFieldBuffer);
+    end;
+
+    trigger OnNewRecord(BelowxRec: Boolean)
+    begin
+        ClearCalculatedFields();
+        RegisterFieldSet(Rec.FieldNo(Type));
+    end;
+
+
+    var
+        TempFieldBuffer: Record "Field Buffer" temporary;
+        TempItemFieldSet: Record 2000000041 temporary;
+        Item: Record Item;
+        Resource: Record Resource;
+        LinesLoaded: Boolean;
+        FiltersNotSpecifiedErr: Label 'You must specify a Document Type and a Document No. to get an assembly line.';
+        AssemblyOrderNotFoundErr: Label 'The specified Assembly Order was not found.';
+        CannotChangeDocumentIdNoErr: Label 'The value for "documentId" cannot be modified.', Comment = 'documentId is a field name and should not be translated.';
+        CannotChangeLineNoErr: Label 'The value for sequence cannot be modified. Delete and insert the line again.';
+        CannotChangeLineObjectNoErr: Label 'The value for "lineObjectNumber" cannot be modified.', Comment = 'lineObjectNumber is a field name and should not be translated.';
+        BothItemIdAndResourceIdAreSpecifiedErr: Label 'Both "itemId" and "resourceId" are specified. Specify only one of them.', Comment = 'itemId and resourceId are field names and should not be translated.';
+        ItemDoesNotExistErr: Label 'Item does not exist.';
+        ResourceDoesNotExistErr: Label 'Resource does not exist.';
+        IDOrDocumentIdShouldBeSpecifiedForLinesErr: Label 'You must specify an Id or a Document Id to get the lines.';
+
+
+    local procedure RegisterFieldSet(FieldNo: Integer)
+    var
+        LastOrderNo: Integer;
+    begin
+        LastOrderNo := 1;
+        if TempFieldBuffer.FindLast() then
+            LastOrderNo := TempFieldBuffer.Order + 1;
+
+        Clear(TempFieldBuffer);
+        TempFieldBuffer.Order := LastOrderNo;
+        TempFieldBuffer."Table ID" := Database::"APILP - Assembly Line Aggreg.";
+        TempFieldBuffer."Field ID" := FieldNo;
+        TempFieldBuffer.Insert();
+    end;
+
+    local procedure ClearCalculatedFields()
+    begin
+        TempFieldBuffer.Reset();
+        TempFieldBuffer.DeleteAll();
+        TempItemFieldSet.Reset();
+        TempItemFieldSet.DeleteAll();
+
+        Clear(Item);
+        Clear(Resource);
+    end;
+}
