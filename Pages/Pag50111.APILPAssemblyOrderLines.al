@@ -123,6 +123,7 @@ page 50111 "APILP - Assembly Order Lines"
     var
         cannotModifyReleaseOrder: Label 'Released orders cannot be modified or deleted.';
         CannotChangeDocumentIdNoErr: Label 'The value for "documentId" cannot be modified.', Comment = 'documentId is a field name and should not be translated.';
+        CannotInsertWithoutDocumentNo: Label 'Cannot insert a line without Document No.';
 
     trigger OnDeleteRecord(): Boolean
     var
@@ -140,6 +141,28 @@ page 50111 "APILP - Assembly Order Lines"
         if AssemblyHeader.Status <> AssemblyHeader.Status::Open then
             error(cannotModifyReleaseOrder);
     end;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    var
+        AssemblyHeader: record "Assembly Header";
+        AssemblyLines: record "Assembly Line";
+    begin
+        Rec."Document Type" := Rec."Document Type"::Order;
+        if Rec."Document No." = '' then
+            error(CannotInsertWithoutDocumentNo);
+        if Rec."Line No." = 0 then begin
+            AssemblyHeader.Reset();
+            AssemblyHeader.Get(Rec."Document Type", Rec."Document No.");
+            AssemblyLines.Reset();
+            AssemblyLines.SetRange("Document Type", Rec."Document Type");
+            AssemblyLines.SetRange("Document No.", Rec."Document No.");
+            if AssemblyLines.FindLast() then
+                Rec."Line No." := AssemblyLines."Line No.";
+            Rec."Line No." += 10000;
+        end;
+    end;
+
+
 
     trigger OnNewRecord(BelowxRec: Boolean)
     begin

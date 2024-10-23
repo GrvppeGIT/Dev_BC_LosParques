@@ -340,6 +340,31 @@ page 50102 "APILP - Customers"
                 {
                     Caption = 'Last Modified Date';
                 }
+                field(custPostingGrp; Rec."Customer Posting Group")
+                {
+                    Caption = 'Customer Posting Group';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Customer Posting Group"));
+                    end;
+                }
+                field(genBusPostingGrp; Rec."Gen. Bus. Posting Group")
+                {
+                    Caption = 'Gen. Bus. Posting Group';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("Gen. Bus. Posting Group"));
+                    end;
+                }
+                field(vatBusPostingGrp; Rec."VAT Bus. Posting Group")
+                {
+                    Caption = 'VAT Bus. Posting Group';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo("VAT Bus. Posting Group"));
+                    end;
+                }
+
                 field(fiscalType; Rec."FJH.Fiscal type")
                 {
                     Caption = 'Fiscal Type';
