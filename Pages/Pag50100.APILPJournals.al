@@ -151,7 +151,9 @@ page 50100 "APILP - Journals"
                 if GenJournalLine."Document No." <> OldDocument then begin
                     OldDocument := GenJournalLine."Document No.";
                     DocumentList.Add(GenJournalLine."Document No.");
+#pragma warning disable AL0603
                     TypeList.Add(GenJournalLine."Document Type");
+#pragma warning restore AL0603
                     DateList.Add(GenJournalLine."Posting Date");
                 end;
             until GenJournalLine.Next() = 0;

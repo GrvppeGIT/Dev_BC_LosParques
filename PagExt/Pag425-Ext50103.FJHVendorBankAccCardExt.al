@@ -31,6 +31,11 @@ pageextension 50103 "FJH Vendor Bank Acc. Card Ext" extends "Vendor Bank Account
         }
         addafter(Name)
         {
+            field("FJH Payment Mode"; Rec."FJH Payment Mode")
+            {
+                ApplicationArea = All;
+            }
+
             field("FJH CV Withdrawer VAT No."; Rec."FJH CV Withdrawer VAT No.")
             {
                 ApplicationArea = All;

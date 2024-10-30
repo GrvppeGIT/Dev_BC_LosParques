@@ -32,7 +32,6 @@ codeunit 50101 "FJH Payments Subscriptions"
         Vendor: Record Vendor;
         VendorBankAccount: Record "Vendor Bank Account";
         Employee: Record Employee;
-        PaymentMethod: Record "Payment Method";
     begin
         IsHandled := true;
 
@@ -60,11 +59,8 @@ codeunit 50101 "FJH Payments Subscriptions"
                         AddFieldEmptyError(GenJournalLine, Vendor.TableCaption(), Vendor.FieldCaption(Name), GenJournalLine."Account No.");
                     if GenJournalLine."Recipient Bank Account" <> '' then begin
                         VendorBankAccount.Get(Vendor."No.", GenJournalLine."Recipient Bank Account");
-                        PaymentMethod.Reset();
-                        PaymentMethod.Get(GenJournalLine."Payment Method Code");
-
-                        if (PaymentMethod."FJH Payment Mode" = PaymentMethod."FJH Payment Mode"::"Checking Account") or
-                           (PaymentMethod."FJH Payment Mode" = PaymentMethod."FJH Payment Mode"::"Savings Account") then begin
+                        if (VendorBankAccount."FJH Payment Mode" = VendorBankAccount."FJH Payment Mode"::"Checking Account") or
+                           (VendorBankAccount."FJH Payment Mode" = VendorBankAccount."FJH Payment Mode"::"Savings Account") then begin
                             if VendorBankAccount."Bank Account No." = '' then
                                 AddFieldEmptyError(
                                   GenJournalLine, VendorBankAccount.TableCaption(), VendorBankAccount.FieldCaption("Bank Account No."), GenJournalLine."Recipient Bank Account");
@@ -76,7 +72,7 @@ codeunit 50101 "FJH Payments Subscriptions"
                                   GenJournalLine, VendorBankAccount.TableCaption(), VendorBankAccount.FieldCaption("Bank Branch No."), GenJournalLine."Recipient Bank Account");
                         end;
 
-                        if PaymentMethod."FJH Payment Mode" = PaymentMethod."FJH Payment Mode"::"Branch Cash Voucher" then begin
+                        if VendorBankAccount."FJH Payment Mode" = VendorBankAccount."FJH Payment Mode"::"Branch Cash Voucher" then begin
                             if VendorBankAccount."FJH Economic Activity" = '' then
                                 AddFieldEmptyError(
                                   GenJournalLine, VendorBankAccount.TableCaption(), VendorBankAccount.FieldCaption("FJH Economic Activity"), GenJournalLine."Recipient Bank Account");
@@ -85,7 +81,7 @@ codeunit 50101 "FJH Payments Subscriptions"
                                   GenJournalLine, VendorBankAccount.TableCaption(), VendorBankAccount.FieldCaption("FJH Destination Branch"), GenJournalLine."Recipient Bank Account");
                         end;
 
-                        if PaymentMethod."FJH Payment Mode" = PaymentMethod."FJH Payment Mode"::"Company Cash Voucher" then begin
+                        if VendorBankAccount."FJH Payment Mode" = VendorBankAccount."FJH Payment Mode"::"Company Cash Voucher" then begin
                             if VendorBankAccount."FJH Economic Activity" = '' then
                                 AddFieldEmptyError(
                                   GenJournalLine, VendorBankAccount.TableCaption(), VendorBankAccount.FieldCaption("FJH Economic Activity"), GenJournalLine."Recipient Bank Account");
@@ -115,6 +111,7 @@ codeunit 50101 "FJH Payments Subscriptions"
         PaymentExportData."FJH Recipient Bank No." := VendorBankAccount."Transit No.";
         PaymentExportData."FJH Destination Branch" := VendorBankAccount."FJH Destination Branch";
         PaymentExportData."FJH Economic Activity" := VendorBankAccount."FJH Economic Activity";
+        PaymentExportData."FJH Payment Mode" := VendorBankAccount."FJH Payment Mode";
         if PaymentExportData."FJH Payment Mode" = PaymentExportData."FJH Payment Mode"::"Branch Cash Voucher" then begin
             PaymentExportData."Recipient Name" := VendorBankAccount.Name;
             PaymentExportData."Recipient Address" := VendorBankAccount.Address;

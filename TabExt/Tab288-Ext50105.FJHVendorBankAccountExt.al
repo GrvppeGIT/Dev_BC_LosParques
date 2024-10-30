@@ -30,6 +30,13 @@ tableextension 50105 "FJH Vendor Bank Account Ext" extends "Vendor Bank Account"
                     "FJH CV Withdrawer VAT No." := CUFiscalValidators.validateRUT("FJH CV Withdrawer VAT No.", 'RUT');
             end;
         }
+        field(50104; "FJH Payment Mode"; Enum "FJH Transfer Payment Mode")
+        {
+            Caption = 'Payment Mode';
+            DataClassification = CustomerContent;
+            ToolTip = 'Payment Mode for Electronic Transfers';
+        }
+
         modify("Transit No.")
         {
             TableRelation = "FJH.Bank Code";

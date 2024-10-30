@@ -97,11 +97,6 @@ codeunit 50102 "FJH CT-Fill Export Buffer"
             else
                 PaymentExportData."Currency Code" := TempGenJnlLine."Currency Code";
 
-            //Add Payment Mode
-            PaymentMethod.Reset();
-            PaymentMethod.Get(TempGenJnlLine."Payment Method Code");
-            PaymentExportData."FJH Payment Mode" := PaymentMethod."FJH Payment Mode";
-
             case TempGenJnlLine."Account Type" of
                 TempGenJnlLine."Account Type"::Customer:
                     begin

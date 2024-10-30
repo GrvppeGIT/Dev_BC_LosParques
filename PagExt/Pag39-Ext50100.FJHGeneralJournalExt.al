@@ -63,7 +63,9 @@ pageextension 50100 "FJH General Journal Ext" extends "General Journal"
                             if GenJournalLine."Document No." <> OldDocument then begin
                                 OldDocument := GenJournalLine."Document No.";
                                 DocumentList.Add(GenJournalLine."Document No.");
+#pragma warning disable AL0603
                                 TypeList.Add(GenJournalLine."Document Type");
+#pragma warning restore AL0603
                                 DateList.Add(GenJournalLine."Posting Date");
                             end;
                         until GenJournalLine.Next() = 0;

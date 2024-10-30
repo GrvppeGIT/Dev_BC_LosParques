@@ -285,6 +285,12 @@
           <note from="Developer" annotates="general" priority="2">documentId is a field name and should not be translated.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Assembly Order Lines - NamedType CannotChangeDocumentIdNoErr</note>
         </trans-unit>
+        <trans-unit id="Page 2201701112 - NamedType 138993744" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cannot insert a line without Document No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Assembly Order Lines - NamedType CannotInsertWithoutDocumentNo</note>
+        </trans-unit>
         <trans-unit id="Page 2201701112 - NamedType 2399002266" size-unit="char" translate="yes" xml:space="preserve">
           <source>Released orders cannot be modified or deleted.</source>
           <target>Las órdenes lanzadas no se pueden modificar ni borrar.</target>
@@ -909,6 +915,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Customers - Control customerFinancialDetails - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3659406130 - Control 276889776 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Customers - Control custPostingGrp - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3659406130 - Control 171251140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Default Dimensions</source>
           <target>Dimensiones por Defecto</target>
@@ -944,6 +956,12 @@
           <target>Tipo fiscal</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Customers - Control fiscalType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3659406130 - Control 319921567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gen. Bus. Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Customers - Control genBusPostingGrp - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3659406130 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
@@ -1058,6 +1076,12 @@
           <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Customers - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3659406130 - Control 997021726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Bus. Posting Group</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Customers - Control vatBusPostingGrp - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3659406130 - Control 2626150973 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Website</source>
@@ -3857,7 +3881,7 @@
         </trans-unit>
         <trans-unit id="TableExtension 3763202943 - Field 79031831 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 658627162">
           <source>Payment Mode</source>
-          <target state="needs-translation"/>
+          <target>Modo de Pago</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Payment Export Data Ext. - Field FJH Payment Mode - Property Caption</note>
         </trans-unit>
@@ -3897,18 +3921,6 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Payment Export Data Ext. - Field FJH Vendor Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="TableExtension 2755969772 - Field 79031831 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3566004263">
-          <source>Payment Mode for Electronic Transfers</source>
-          <target>Modo de Pago para las Nóminas de Pago a Proveedores</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Payment Method Ext - Field FJH Payment Mode - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 2755969772 - Field 79031831 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3566004263">
-          <source>Payment Mode</source>
-          <target>Modo de Pago</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Payment Method Ext - Field FJH Payment Mode - Property Caption</note>
-        </trans-unit>
         <trans-unit id="TableExtension 1907270282 - Field 1408344940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4231435149">
           <source>CV Withdrawer VAT No.</source>
           <target>RUT quien retira</target>
@@ -3926,6 +3938,18 @@
           <target>Actividad Económica</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Vendor Bank Account Ext - Field FJH Economic Activity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1907270282 - Field 79031831 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4231435149">
+          <source>Payment Mode for Electronic Transfers</source>
+          <target>Modo de Pago para Transerencias Electrónicas</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Vendor Bank Account Ext - Field FJH Payment Mode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1907270282 - Field 79031831 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4231435149">
+          <source>Payment Mode</source>
+          <target>Modo de Pago</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension FJH Vendor Bank Account Ext - Field FJH Payment Mode - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1907270282 - Change 1672122356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4231435149">
           <source>Bank Code</source>

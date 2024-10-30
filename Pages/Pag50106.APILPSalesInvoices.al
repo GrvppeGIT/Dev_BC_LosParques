@@ -641,60 +641,60 @@ page 50106 "APILP - Sales Invoices"
                     end;
                 }
                 //NATIONAL FIELDS
-                field(documentTypeCode; 'V-FC-E')
+                field(documentTypeCode; Rec."FJH.Document Type Code")
                 {
                     Caption = 'Document Type Code';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo("FJH.Document Type Code"));
                     end;
                 }
-                field(salesPoint; '01')
+                field(salesPoint; Rec."FJH.Sales Point")
                 {
                     Caption = 'Sales Point';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo(Rec."FJH.Sales Point"));
                     end;
                 }
-                field(fiscalType; 'AFECTO')
+                field(fiscalType; Rec."FJH.Fiscal Type")
                 {
                     Caption = 'Fiscal Type';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo("FJH.Fiscal Type"));
                     end;
                 }
-                field(referenceOption; '')
+                field(referenceOption; Rec."FJH.Ref. Option 802 in XML")
                 {
                     Caption = 'Reference Option 802 in XML';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo("FJH.Ref. Option 802 in XML"));
                     end;
                 }
-                field(lineOfBusiness; 'PERSONA NATURAL')
+                field(lineOfBusiness; Rec."FJH.Line of Business")
                 {
                     Caption = 'Line of Business';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo("FJH.Line of Business"));
                     end;
                 }
-                field(Province; 'RM')
+                field(Province; Rec."FJH.Province")
                 {
                     Caption = 'Province';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo("FJH.Province"));
                     end;
                 }
-                field(electronicShipment; false)
+                field(electronicShipment; Rec."FJH.Electronic Shipment")
                 {
                     Caption = 'Electronic Shipment';
                     trigger OnValidate()
                     begin
-                        //RegisterFieldSet(Rec.FieldNo("Sell-to E-Mail"));
+                        RegisterFieldSet(Rec.FieldNo("FJH.Electronic Shipment"));
                     end;
                 }
                 part(attachments; "APIV2 - Attachments")
