@@ -425,6 +425,15 @@ xmlport 50101 "FJH Banco CL Payment Export"
                         CodActEconomica := '  ';
                     MontoPago := FillWith0(Format((round(paymentexportdata.Amount * 100, 1, '<')), 0, 9), 13);
                     //Fecha de Pago:  ya viene establecido
+                    if (paymentexportdata."FJH Payment Mode" = paymentexportdata."FJH Payment Mode"::"Checking Account") or
+                       (paymentexportdata."FJH Payment Mode" = paymentexportdata."FJH Payment Mode"::"Savings Account") then begin
+                        CodBanco := FillWith0(paymentexportdata."FJH Recipient Bank No.", 3);
+                        NumeroCuenta := paymentexportdata."Recipient Bank Acc. No.";
+                    end else begin
+                        CodBanco := '   ';
+                        NumeroCuenta := '                      ';
+                    end;
+
                     case paymentexportdata."FJH Payment Mode" of
                         paymentexportdata."FJH Payment Mode"::"Savings Account":
                             begin
@@ -443,14 +452,6 @@ xmlport 50101 "FJH Banco CL Payment Export"
                             else
                                 MedioDePago := '07';
                         end;
-                    end;
-                    if (paymentexportdata."FJH Payment Mode" = paymentexportdata."FJH Payment Mode"::"Checking Account") or
-                       (paymentexportdata."FJH Payment Mode" = paymentexportdata."FJH Payment Mode"::"Savings Account") then begin
-                        CodBanco := FillWith0(paymentexportdata."FJH Recipient Bank No.", 3);
-                        NumeroCuenta := paymentexportdata."Recipient Bank Acc. No.";
-                    end else begin
-                        CodBanco := '   ';
-                        NumeroCuenta := '                      ';
                     end;
 
                     if MedioDePago = '04' then
