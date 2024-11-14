@@ -344,7 +344,8 @@ xmlport 50101 "FJH Banco CL Payment Export"
                             CreditTransferEntry."Transfer Amount" := GJL.Amount;
                             CreditTransferEntry."Transfer Date" := WorkDate();
                             CreditTransferEntry."Recipient Bank Account No." := CopyStr(GJL."Document No.", Strlen(GJL."Document No.") - 5, 6);
-                            CreditTransferEntry."Transaction ID" := 'FE';
+                            //CreditTransferEntry."Transaction ID" := 'FE';
+                            CreditTransferEntry."Transaction ID" := '30';
                             CreditTransferEntry.Insert();
                         end;
                         RegCount := CreditTransferEntry.Count();

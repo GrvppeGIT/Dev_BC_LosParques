@@ -86,5 +86,85 @@ pageextension 50101 "FJH Payment Journal Ext" extends "Payment Journal"
                 end;
             }
         }
+        addbefore(Post)
+        {
+            action(Summarize)
+            {
+                Promoted = true;
+                PromotedCategory = Process;
+                Caption = 'Summarize Payment';
+                ToolTip = 'Summarizes all the lines and insert a Bank line with the total amount.';
+                ApplicationArea = Basic, Suite;
+                Image = BankAccountRec;
+                //Visible = false;
+
+                trigger OnAction()
+                var
+                    GenJnlLine: record "Gen. Journal Line";
+                    TotalBalance: decimal;
+                    DocumentType: Enum "Gen. Journal Document Type";
+                    DocumentNo: Code[20];
+                    BankAccount: Code[20];
+                    PostingDate: date;
+                    NewLine: integer;
+                    DimSetID: integer;
+                    PaymentMethodCode: Code[20];
+                    ErrBankAcctNotFound: label 'Balancing Bank Account not found';
+                begin
+
+                    TotalBalance := 0;
+                    DocumentType := DocumentType::" ";
+                    DocumentNo := '';
+                    BankAccount := '';
+                    GenJnlLine.Reset();
+                    GenJnlLine.SetRange("Journal Template Name", Rec."Journal Template Name");
+                    GenJnlLine.SetRange("Journal Batch Name", Rec."Journal Batch Name");
+                    if GenJnlLine.FindSet() Then begin
+                        DocumentType := GenJnlLine."Document Type";
+                        DocumentNo := GenJnlLine."Document No.";
+                        PostingDate := GenJnlLine."Posting Date";
+                        repeat
+                            If (BankAccount = '') AND (GenJnlLine."Bal. Account Type" = GenJnlLine."Bal. Account Type"::"Bank Account") then
+                                BankAccount := GenJnlLine."Bal. Account No.";
+                            if (DimSetID = 0) AND (GenJnlLine."Dimension Set ID" <> 0) then
+                                DimSetID := GenJnlLine."Dimension Set ID";
+                            if (PaymentMethodCode = '') AND (GenJnlLine."Payment Method Code" <> '') then
+                                PaymentMethodCode := GenJnlLine."Payment Method Code";
+                            TotalBalance += -GenJnlLine.Amount;
+                            NewLine := GenJnlLine."Line No.";
+                        until GenJnlLine.Next() = 0;
+                    end;
+                    NewLine += 10000;
+                    if BankAccount = '' then
+                        error(ErrBankAcctNotFound);
+                    if GenJnlLine.FindSet() then
+                        repeat
+                            if GenJnlLine."Document Type" <> DocumentType then
+                                GenJnlLine.Validate("Document Type", DocumentType);
+                            if GenJnlLine."Document No." <> DocumentNo then
+                                GenJnlLine.Validate("Document No.", DocumentNo);
+                            GenJnlLine.Validate("Bal. Account No.", '');
+                            //GenJnlLine.Validate("Bal. Account Type", GenJnlLine."Bal. Account Type"::"G/L Account");
+                            GenJnlLine.Modify();
+                        until GenJnlLine.Next() = 0;
+
+                    GenJnlLine.Reset();
+                    GenJnlLine.InitNewLine(PostingDate, PostingDate, PostingDate, '', '', '', 0, '');
+                    GenJnlLine."Journal Template Name" := Rec."Journal Template Name";
+                    GenJnlLine."Journal Batch Name" := Rec."Journal Batch Name";
+                    GenJnlLine."Line No." := NewLine;
+                    GenJnlLine.Validate("Document Type", DocumentType);
+                    GenJnlLine.Validate("Document No.", DocumentNo);
+                    GenJnlLine.Validate("Account Type", GenJnlLine."Account Type"::"Bank Account");
+                    GenJnlLine.Validate("Account No.", BankAccount);
+                    if PaymentMethodCode <> '' then
+                        GenJnlLine.Validate("Payment Method Code", PaymentMethodCode);
+                    if DimSetID <> 0 then
+                        GenJnlLine.Validate("Dimension Set ID", DimSetID);
+                    GenJnlLine.Validate(Amount, TotalBalance);
+                    GenJnlLine.Insert();
+                end;
+            }
+        }
     }
 }
