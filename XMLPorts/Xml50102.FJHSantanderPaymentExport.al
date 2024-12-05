@@ -213,14 +213,14 @@ xmlport 50102 "FJH Santander Payment Export"
                     FieldIndex: integer;
                 begin
                     RutBeneficiario := PadLeft(Delchr(paymentexportdata."FJH Recipient RUT", '=', '.-,;:'), 11, '0');
-                    //NombreBenefic := paymentexportdata."Recipient Name";
-                    NombreBenefic := paymentexportdata."FJH Vendor Address";
-                    //DireccionBeneficiario := paymentexportdata."Recipient Address";
-                    DireccionBeneficiario := paymentexportdata."FJH Vendor Address";
-                    //ComunaBeneficiario := paymentexportdata."Recipient County";
-                    ComunaBeneficiario := paymentexportdata."FJH Vendor Address 2";
-                    //CiudadBeneficiario := paymentexportdata."Recipient City";
-                    CiudadBeneficiario := paymentexportdata."FJH Vendor City";
+                    NombreBenefic := paymentexportdata."Recipient Name";
+                    //NombreBenefic := paymentexportdata."FJH Vendor Name";
+                    DireccionBeneficiario := paymentexportdata."Recipient Address";
+                    //DireccionBeneficiario := paymentexportdata."FJH Vendor Address";
+                    ComunaBeneficiario := paymentexportdata."Recipient County";
+                    //ComunaBeneficiario := paymentexportdata."FJH Vendor Address 2";
+                    CiudadBeneficiario := paymentexportdata."Recipient City";
+                    //CiudadBeneficiario := paymentexportdata."FJH Vendor City";
                     //ModalidadDePago := '02';  //ABONO EN CUENTA
                     case paymentexportdata."FJH Payment Mode" of
                         paymentexportdata."FJH Payment Mode"::"Savings Account":

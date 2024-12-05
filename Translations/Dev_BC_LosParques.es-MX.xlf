@@ -1485,6 +1485,684 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Journals - Control templateDisplayName - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 322104624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>apilpSalesCrMemo</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memo</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memos</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 2435911484" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The credit memo cannot be cancelled because it has already been canceled.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType AlreadyCancelledErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 4220305845" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The bill-to customer values do not match to a specific Customer.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType BillToCustomerValuesDontMatchErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 3911703272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Canceling the credit memo failed because of the following error: \\%1\\An invoice is posted.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%1 - arbitrary text (an error message)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CancelingCreditMemoFailedInvoiceCreatedAndPostedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 3551748667" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Canceling the credit memo failed because of the following error: \\%1\\An invoice is created but not posted.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%1 - arbitrary text (an error message)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CancelingCreditMemoFailedInvoiceCreatedButNotPostedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 2570812846" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Canceling the credit memo failed because of the following error: \\%1.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">%1 - arbitrary text (an error message)</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CancelingCreditMemoFailedNothingCreatedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 3210053793" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "id" cannot be changed.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">id is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CannotChangeIDErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 3058381394" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The credit memo cannot be found.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CannotFindCreditMemoErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 1515454780" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The bill-to customer cannot be found.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CouldNotFindBillToCustomerErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 491074039" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The sell-to customer cannot be found.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CouldNotFindSellToCustomerErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 1805429782" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "currencyCode" does not match to a Currency.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">currencyCode is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CurrencyCodeDoesNotMatchACurrencyErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 3939449910" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "currencyId" does not match to a Currency.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">currencyId is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CurrencyIdDoesNotMatchACurrencyErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 2624287652" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The currency values do not match to a specific Currency.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType CurrencyValuesDontMatchErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 3517791419" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The action can be applied to a draft credit memo only.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType DraftCreditMemoActionErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 1940554256" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "invoiceId" does not match to an Invoice.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">invoiceId is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType InvoiceIdDoesNotMatchAnInvoiceErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 1350713266" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "invoiceId" and "invoiceNumber" do not match to a specific Invoice.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">invoiceId and invoiceNumber are field names and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType InvoiceValuesDontMatchErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 1303806686" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please add at least one line item to the credit memo.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType NoLineErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 2002735526" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "paymentTermsId" does not match to a Payment Terms.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">paymentTermsId is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType PaymentTermsIdDoesNotMatchAPaymentTermsErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 30303159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The action can be applied to a posted credit memo only.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType PostedCreditMemoActionErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 220107254" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "customerReturnReasonId" does not match to a Reason Code.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">customerReturnReasonCodeId is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType ReasonCodeIdDoesNotMatchAReasonCodeErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 335169170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A "customerNumber" or a "customerId" must be provided.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">customerNumber and customerId are field names and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType SellToCustomerNotProvidedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 1170909690" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The sell-to customer values do not match to a specific Customer.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType SellToCustomerValuesDontMatchErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - NamedType 2619345254" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The "shipmentMethodId" does not match to a Shipment Method.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">shipmentMethodId is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - NamedType ShipmentMethodIdDoesNotMatchAShipmentMethodErr</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 8604086 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control attachments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3948026507 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Address Line 1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToAddressLine1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1566149062 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Address Line 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToAddressLine2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2880519393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to City</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToCity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 683811484 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Country/Region Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToCountry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2913482491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-To Customer Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToCustomerId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3592631193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-To Customer No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToCustomerNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3276161585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-To Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3070315367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Post Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToPostCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2700905313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to State</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control billToState - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1341711477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Memo Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control creditMemoDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1808640270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control currencyCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 416025006 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control currencyId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 38468747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control customerId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3234347301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control customerName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3226897001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control customerNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1641373937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Return Reason Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control customerReturnReasonId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 252685889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set Lines</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control dimensionSetLines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2286581531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>discountAmount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control discountAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1312831416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount Applied Before Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control discountAppliedBeforeTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 750067815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Attachments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control documentAttachments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2763176388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Due Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control dueDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3163706192 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 138905291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>External Document No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control externalDocumentNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1465565208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>InvoiceId</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control invoiceId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 673677518 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control invoiceNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3387994362 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control LPsalesCreditMemoLines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2757394829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3603481462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Terms Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control paymentTermsId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3310713783 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PDF Document</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control pdfDocument - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1842080825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control phoneNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1260828904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control postingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3690097785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prices Include Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control pricesIncludeTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 4171677711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control salesperson - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1534408368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Address Line 1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control sellToAddressLine1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2172104985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Address Line 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control sellToAddressLine2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 639928126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to City</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control sellToCity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1038432503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Country/Region Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control sellToCountry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 2043020436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Post Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control sellToPostCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 270403302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to State</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control sellToState - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 419055430 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipment Method Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control shipmentMethodId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 667097208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 1 Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control shortcutDimension1Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3389845713 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 2 Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control shortcutDimension2Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 3762354732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Amount Excluding Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control totalAmountExcludingTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 1842111270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Amount Including Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control totalAmountIncludingTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 322104624 - Control 4101803605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tax Amount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Cr. Memo - Control totalTaxAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memo Line</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memo Lines</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 1048593969" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account does not exist.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType AccountDoesNotExistErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 3559327969" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Both "itemId" and "accountId" are specified. Specify only one of them.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">itemId and accountId are field names and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType BothItemIdAndAccountIdAreSpecifiedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 2697791227" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value for "documentId" cannot be modified.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">documentId is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType CannotChangeDocumentIdNoErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 3577643735" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value for sequence cannot be modified. Delete and insert the line again.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType CannotChangeLineNoErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 91023212" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value for "lineObjectNumber" cannot be modified.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">lineObjectNumber is a field name and should not be translated.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType CannotChangeLineObjectNoErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 2565185687" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must specify an id or a Document Id to get the lines.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType IDOrDocumentIdShouldBeSpecifiedForLinesErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - NamedType 2671689085" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item does not exist.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - NamedType ItemDoesNotExistErr</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 1406037800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control accountId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 3260766182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Excluding Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control amountExcludingTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 4103372332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Including Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control amountIncludingTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 2762750464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control description2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 252685889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set Lines</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control dimensionSetLines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 2286581531 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount Amount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control discountAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 1312831416 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount Applied Before Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control discountAppliedBeforeTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 659357154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount Percent</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control discountPercent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 565362798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control documentId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 1512188312 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Discount Allocation</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control invoiceDiscountAllocation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 1137752084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control itemId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 3104767193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Variant Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control itemVariantId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 1716610572 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Object No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control lineObjectNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 2268742530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control lineType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 743685791 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control location - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 110024060 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control locationId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 3755691981 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Amount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control netAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 462527801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Amount Including Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control netAmountIncludingTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 639184402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Tax Amount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control netTaxAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 4026315105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sequence</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control sequence - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 3656808776 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipment Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control shipmentDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 594817020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control taxCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 2776482850 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax Percent</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control taxPercent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 4101803605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Tax Amount</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control totalTaxAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 1092236590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Of Measure Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control unitOfMeasureCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 84346318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Of Measure Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control unitOfMeasureId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 709406392 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Credit Mem Lines - Control unitPrice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1159609943 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Invoice Line</source>
           <target>Sales Invoice Line</target>
@@ -3027,6 +3705,330 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Orders - Control totalTaxAmount - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 327397030 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>apilpSalesShipments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Shipment</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Shipments</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3948026507 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Address Line 1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a dirección</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToAddressLine1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1566149062 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Address Line 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=FActura-a colonia</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToAddressLine2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2880519393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to City</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a ciudad</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToCity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 683811484 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Country/Region Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a país/región</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToCountry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2913482491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Customer Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a Id cliente</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToCustomerId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3592631193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-To Customer No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a Nº cliente</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToCustomerNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3276161585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-To Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a nombre</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3070315367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to Post Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a código postal</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToPostCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2700905313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill-to State</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Factura-a Municipio/Ciudad</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control billToState - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1808640270 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Cód. divisa</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control currencyCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 38468747 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Id Cliente</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control customerId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3234347301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a Nombre</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control customerName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3226897001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a Nº cliente</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control customerNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 4139490446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Purchase Order Reference</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Referencia</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control customerPurchaseOrderReference - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 252685889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set Lines</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control dimensionSetLines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3780296230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Tipo de documento</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control documentTypeCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2763176388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Due Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Fecha entrega requerida</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control dueDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2464190350 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Electronic Shipment</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Guía electrónica</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control electronicShipment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3163706192 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 138905291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>External Document No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Nº documento externo</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control externalDocumentNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2611084382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fiscal Type</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Tipo fiscal</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control fiscalType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3536606179 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Document ID</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Global document ID</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control globalDocumentId - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 304051935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Fecha emisión documento</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control invoiceDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2757394829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control number - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3577402367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Nº pedido</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control orderNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3493223734 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Terms Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Cód. términos pago</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control paymentTermsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1842080825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone No.</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control phoneNumber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1260828904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Fecha registro</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control postingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3690097785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prices Include Tax</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Precios IVA incluído</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control pricesIncludeTax - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1237689382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Province</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Provincia</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control Province - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 4171677711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Cód. vendedor</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control salesperson - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3589767256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Point</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Punto de venta</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control salesPoint - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2423818095 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control salesShipmentLines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1534408368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Address Line 1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a Dirección</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control sellToAddressLine1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2172104985 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Address Line 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a Colonia</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control sellToAddressLine2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 639928126 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to City</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a Ciudad</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control sellToCity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1038432503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Country/Region Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a País/Región</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control sellToCountry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2043020436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Post Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a código postal</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control sellToPostCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 270403302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to State</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Venta-a Municipio/Ciudad</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control sellToState - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1999593414 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipment Method Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Método envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipmentMethodCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 354324300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Address Line 1</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Dirección envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToAddressLine1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 992020917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Address Line 2</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Colonia envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToAddressLine2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1336190306 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to City</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Ciudad envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToCity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1979445219 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Contact</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Contacto envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToContact - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 3828400819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Country/Region Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=País/región envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToCountry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1889388274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Name</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Nombre envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2895959832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to Post Code</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Código postal envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToPostCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 2719673386 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ship-to State</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Municipio/ciudad envío</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control shipToState - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 327397030 - Control 1184250849 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status Authorization</source>
+          <target state="needs-translation"/>
+          <note from="Developer" annotates="general" priority="2">ESM=Estado de autorización</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page APILP - Sales Shipments - Control statusAuthorization - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1906900421 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>API LP ShipToAddress</source>
           <target state="needs-translation"/>
@@ -3749,7 +4751,7 @@
         </trans-unit>
         <trans-unit id="PageExtension 1335373326 - Action 1579194220 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2583272393">
           <source>Post With &amp;GL Register</source>
-          <target>Post With &amp;GL Register</target>>
+          <target>Post With &amp;GL Register</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension FJH General Journal Ext - Action PostWithGLRegister - Property Caption</note>
         </trans-unit>
