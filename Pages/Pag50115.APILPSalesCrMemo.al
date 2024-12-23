@@ -571,7 +571,7 @@ page 50115 "APILP - Sales Cr. Memo"
                     end;
                 }
                 //NATIONAL FIELDS
-                /*
+                
                 field(documentTypeCode; Rec."FJH.Document Type Code")
                 {
                     Caption = 'Document Type Code';
@@ -612,7 +612,7 @@ page 50115 "APILP - Sales Cr. Memo"
                         RegisterFieldSet(Rec.FieldNo("FJH.Province"));
                     end;
                 }
-                */
+                
                 part(attachments; "APIV2 - Attachments")
                 {
                     Caption = 'Attachments';

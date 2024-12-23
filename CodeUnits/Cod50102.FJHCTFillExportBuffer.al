@@ -45,7 +45,6 @@ codeunit 50102 "FJH CT-Fill Export Buffer"
         CreditTransferEntry: Record "Credit Transfer Entry";
         BankExportImportSetup: Record "Bank Export/Import Setup";
         MessageID: Code[20];
-        PaymentMethod: record "Payment Method";
     begin
         TempGenJnlLine.CopyFilters(GenJnlLine);
         CODEUNIT.Run(CODEUNIT::"SEPA CT-Prepare Source", TempGenJnlLine);

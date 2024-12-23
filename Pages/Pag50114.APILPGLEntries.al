@@ -108,6 +108,14 @@ page 50114 "APILP - G/L Entries"
                 {
                     Caption = 'G/L Register No.';
                 }
+                field("jobNumber"; Rec."Job No.")
+                {
+                    Caption = 'Job No.';
+                }
+                field(JobTaskNumber; Rec."FJH.Job Task No.")
+                {
+                    Caption = 'Job Task No.';
+                }
                 part(attachments; "APIV2 - Attachments")
                 {
                     Caption = 'Attachments';

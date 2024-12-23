@@ -272,7 +272,7 @@ page 50108 "APILP - Sales Orders"
                 }
                 field(billToState; Rec."Bill-to County")
                 {
-                    Caption = 'BillTo State';
+                    Caption = 'Bill-To State';
                     Editable = false;
                 }
                 field(billToPostCode; Rec."Bill-to Post Code")
