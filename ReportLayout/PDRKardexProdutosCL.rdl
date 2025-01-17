@@ -11,277 +11,6 @@
       <rd:DataSourceID>ab8d96c6-ef97-46f5-b982-636f676e0107</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="FORMAT_Today_0_4_">
-          <DataField>FORMAT_Today_0_4_</DataField>
-        </Field>
-        <Field Name="Period_from_______FORMAT_StartDate______to______FORMAT_EndDate_">
-          <DataField>Period_from_______FORMAT_StartDate______to______FORMAT_EndDate_</DataField>
-        </Field>
-        <Field Name="CurrencyDesc">
-          <DataField>CurrencyDesc</DataField>
-        </Field>
-        <Field Name="KardexCaption">
-          <DataField>KardexCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Item_No_">
-          <DataField>Item_No_</DataField>
-        </Field>
-        <Field Name="Item_Description___Item__Description_2_">
-          <DataField>Item_Description___Item__Description_2_</DataField>
-        </Field>
-        <Field Name="Unit_of_Measure_">
-          <DataField>Unit_of_Measure_</DataField>
-        </Field>
-        <Field Name="TransactionTypeLbl">
-          <DataField>TransactionTypeLbl</DataField>
-        </Field>
-        <Field Name="ReferenceNoLbl">
-          <DataField>ReferenceNoLbl</DataField>
-        </Field>
-        <Field Name="ReferenceNo">
-          <DataField>ReferenceNo</DataField>
-        </Field>
-        <Field Name="GuiaLbl">
-          <DataField>GuiaLbl</DataField>
-        </Field>
-        <Field Name="GuiaNo">
-          <DataField>GuiaNo</DataField>
-        </Field>
-        <Field Name="TransactionDateLbl">
-          <DataField>TransactionDateLbl</DataField>
-        </Field>
-        <Field Name="TransactionDate">
-          <DataField>TransactionDate</DataField>
-        </Field>
-        <Field Name="SpecificCostLbl">
-          <DataField>SpecificCostLbl</DataField>
-        </Field>
-        <Field Name="UnitaryTransactionLbl">
-          <DataField>UnitaryTransactionLbl</DataField>
-        </Field>
-        <Field Name="Lot_No_">
-          <DataField>Lot_No_</DataField>
-        </Field>
-        <Field Name="Lot_NoLbl">
-          <DataField>Lot_NoLbl</DataField>
-        </Field>
-        <Field Name="Item__No__">
-          <DataField>Item__No__</DataField>
-        </Field>
-        <Field Name="Text50003_____FORMAT___StartDate__">
-          <DataField>Text50003_____FORMAT___StartDate__</DataField>
-        </Field>
-        <Field Name="FirstBalance">
-          <DataField>FirstBalance</DataField>
-        </Field>
-        <Field Name="FirstBalanceFormat">
-          <DataField>FirstBalanceFormat</DataField>
-        </Field>
-        <Field Name="FirstCostAmount">
-          <DataField>FirstCostAmount</DataField>
-        </Field>
-        <Field Name="FirstCostAmountFormat">
-          <DataField>FirstCostAmountFormat</DataField>
-        </Field>
-        <Field Name="DocumentNo">
-          <DataField>DocumentNo</DataField>
-        </Field>
-        <Field Name="Location_Code">
-          <DataField>Location_Code</DataField>
-        </Field>
-        <Field Name="Location_Name">
-          <DataField>Location_Name</DataField>
-        </Field>
-        <Field Name="Item_Ledger_Entry__Entry_Type_">
-          <DataField>Item_Ledger_Entry__Entry_Type_</DataField>
-        </Field>
-        <Field Name="FirstBalance_Control1000000006">
-          <DataField>FirstBalance_Control1000000006</DataField>
-        </Field>
-        <Field Name="FirstBalance_Control1000000006Format">
-          <DataField>FirstBalance_Control1000000006Format</DataField>
-        </Field>
-        <Field Name="Quantity">
-          <DataField>Quantity</DataField>
-        </Field>
-        <Field Name="QuantityFormat">
-          <DataField>QuantityFormat</DataField>
-        </Field>
-        <Field Name="UnitCost">
-          <DataField>UnitCost</DataField>
-        </Field>
-        <Field Name="UnitCostFormat">
-          <DataField>UnitCostFormat</DataField>
-        </Field>
-        <Field Name="FirstCostAmount_Control1000000025">
-          <DataField>FirstCostAmount_Control1000000025</DataField>
-        </Field>
-        <Field Name="FirstCostAmount_Control1000000025Format">
-          <DataField>FirstCostAmount_Control1000000025Format</DataField>
-        </Field>
-        <Field Name="FirstBalance_Control1000000019">
-          <DataField>FirstBalance_Control1000000019</DataField>
-        </Field>
-        <Field Name="FirstBalance_Control1000000019Format">
-          <DataField>FirstBalance_Control1000000019Format</DataField>
-        </Field>
-        <Field Name="Item_Ledger_Entry__Entry_Type__Control1000000021">
-          <DataField>Item_Ledger_Entry__Entry_Type__Control1000000021</DataField>
-        </Field>
-        <Field Name="DocumentNo_Control1000000022">
-          <DataField>DocumentNo_Control1000000022</DataField>
-        </Field>
-        <Field Name="Item_Ledger_Entry__Posting_Date__Control1000000023">
-          <DataField>Item_Ledger_Entry__Posting_Date__Control1000000023</DataField>
-        </Field>
-        <Field Name="FirstCostAmount_Control1000000026">
-          <DataField>FirstCostAmount_Control1000000026</DataField>
-        </Field>
-        <Field Name="FirstCostAmount_Control1000000026Format">
-          <DataField>FirstCostAmount_Control1000000026Format</DataField>
-        </Field>
-        <Field Name="Continues____">
-          <DataField>Continues____</DataField>
-        </Field>
-        <Field Name="FirstBalance_Control1000000016">
-          <DataField>FirstBalance_Control1000000016</DataField>
-        </Field>
-        <Field Name="FirstBalance_Control1000000016Format">
-          <DataField>FirstBalance_Control1000000016Format</DataField>
-        </Field>
-        <Field Name="NegativeAmount">
-          <DataField>NegativeAmount</DataField>
-        </Field>
-        <Field Name="NegativeAmountFormat">
-          <DataField>NegativeAmountFormat</DataField>
-        </Field>
-        <Field Name="PositiveAmount">
-          <DataField>PositiveAmount</DataField>
-        </Field>
-        <Field Name="PositiveAmountFormat">
-          <DataField>PositiveAmountFormat</DataField>
-        </Field>
-        <Field Name="FirstCostAmount_Control1000000008">
-          <DataField>FirstCostAmount_Control1000000008</DataField>
-        </Field>
-        <Field Name="FirstCostAmount_Control1000000008Format">
-          <DataField>FirstCostAmount_Control1000000008Format</DataField>
-        </Field>
-        <Field Name="QtyCaptionLbl">
-          <DataField>QtyCaptionLbl</DataField>
-        </Field>
-        <Field Name="QtyCaptionAcumLbl">
-          <DataField>QtyCaptionAcumLbl</DataField>
-        </Field>
-        <Field Name="InventoryCaption">
-          <DataField>InventoryCaption</DataField>
-        </Field>
-        <Field Name="Description_Caption">
-          <DataField>Description_Caption</DataField>
-        </Field>
-        <Field Name="Item__Caption">
-          <DataField>Item__Caption</DataField>
-        </Field>
-        <Field Name="QtyCaption">
-          <DataField>QtyCaption</DataField>
-        </Field>
-        <Field Name="Entry_TypeCaption">
-          <DataField>Entry_TypeCaption</DataField>
-        </Field>
-        <Field Name="Document_No_Caption">
-          <DataField>Document_No_Caption</DataField>
-        </Field>
-        <Field Name="DateCaption">
-          <DataField>DateCaption</DataField>
-        </Field>
-        <Field Name="AmountCaption">
-          <DataField>AmountCaption</DataField>
-        </Field>
-        <Field Name="AmountCaption_Control1102200021">
-          <DataField>AmountCaption_Control1102200021</DataField>
-        </Field>
-        <Field Name="AmountCaption_Control1102200022">
-          <DataField>AmountCaption_Control1102200022</DataField>
-        </Field>
-        <Field Name="Total_Caption">
-          <DataField>Total_Caption</DataField>
-        </Field>
-        <Field Name="Item_Ledger_Entry_Entry_No_">
-          <DataField>Item_Ledger_Entry_Entry_No_</DataField>
-        </Field>
-        <Field Name="Item_Ledger_Entry_Item_No_">
-          <DataField>Item_Ledger_Entry_Item_No_</DataField>
-        </Field>
-        <Field Name="InitialDate_">
-          <DataField>InitialDate_</DataField>
-        </Field>
-        <Field Name="InitialDate_Format">
-          <DataField>InitialDate_Format</DataField>
-        </Field>
-        <Field Name="FinalDate_">
-          <DataField>FinalDate_</DataField>
-        </Field>
-        <Field Name="FinalDate_Format">
-          <DataField>FinalDate_Format</DataField>
-        </Field>
-        <Field Name="UnitCostLbl">
-          <DataField>UnitCostLbl</DataField>
-        </Field>
-        <Field Name="ExtCostLbl">
-          <DataField>ExtCostLbl</DataField>
-        </Field>
-        <Field Name="TotalCost">
-          <DataField>TotalCost</DataField>
-        </Field>
-        <Field Name="TotalCostFormat">
-          <DataField>TotalCostFormat</DataField>
-        </Field>
-        <Field Name="Total_Cus_Caption">
-          <DataField>Total_Cus_Caption</DataField>
-        </Field>
-        <Field Name="Total_Quant_Caption">
-          <DataField>Total_Quant_Caption</DataField>
-        </Field>
-        <Field Name="InitialBalanceLbl">
-          <DataField>InitialBalanceLbl</DataField>
-        </Field>
-        <Field Name="LocationLbl">
-          <DataField>LocationLbl</DataField>
-        </Field>
-        <Field Name="InventoryIDLbl">
-          <DataField>InventoryIDLbl</DataField>
-        </Field>
-        <Field Name="Total_LocationLbl">
-          <DataField>Total_LocationLbl</DataField>
-        </Field>
-        <Field Name="Total_InventoryIDLbl">
-          <DataField>Total_InventoryIDLbl</DataField>
-        </Field>
-        <Field Name="TotalCostinit">
-          <DataField>TotalCostinit</DataField>
-        </Field>
-        <Field Name="TotalCostinitFormat">
-          <DataField>TotalCostinitFormat</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2623,12 +2352,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -2668,4 +2391,275 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>26bfc4ef-846f-4ef6-9c51-c4d977c7da70</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="FORMAT_Today_0_4_">
+          <DataField>FORMAT_Today_0_4_</DataField>
+        </Field>
+        <Field Name="Period_from_______FORMAT_StartDate______to______FORMAT_EndDate_">
+          <DataField>Period_from_______FORMAT_StartDate______to______FORMAT_EndDate_</DataField>
+        </Field>
+        <Field Name="CurrencyDesc">
+          <DataField>CurrencyDesc</DataField>
+        </Field>
+        <Field Name="KardexCaption">
+          <DataField>KardexCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Item_No_">
+          <DataField>Item_No_</DataField>
+        </Field>
+        <Field Name="Item_Description___Item__Description_2_">
+          <DataField>Item_Description___Item__Description_2_</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_">
+          <DataField>Unit_of_Measure_</DataField>
+        </Field>
+        <Field Name="TransactionTypeLbl">
+          <DataField>TransactionTypeLbl</DataField>
+        </Field>
+        <Field Name="ReferenceNoLbl">
+          <DataField>ReferenceNoLbl</DataField>
+        </Field>
+        <Field Name="ReferenceNo">
+          <DataField>ReferenceNo</DataField>
+        </Field>
+        <Field Name="GuiaLbl">
+          <DataField>GuiaLbl</DataField>
+        </Field>
+        <Field Name="GuiaNo">
+          <DataField>GuiaNo</DataField>
+        </Field>
+        <Field Name="TransactionDateLbl">
+          <DataField>TransactionDateLbl</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="SpecificCostLbl">
+          <DataField>SpecificCostLbl</DataField>
+        </Field>
+        <Field Name="UnitaryTransactionLbl">
+          <DataField>UnitaryTransactionLbl</DataField>
+        </Field>
+        <Field Name="Lot_No_">
+          <DataField>Lot_No_</DataField>
+        </Field>
+        <Field Name="Lot_NoLbl">
+          <DataField>Lot_NoLbl</DataField>
+        </Field>
+        <Field Name="Item__No__">
+          <DataField>Item__No__</DataField>
+        </Field>
+        <Field Name="Text50003_____FORMAT___StartDate__">
+          <DataField>Text50003_____FORMAT___StartDate__</DataField>
+        </Field>
+        <Field Name="FirstBalance">
+          <DataField>FirstBalance</DataField>
+        </Field>
+        <Field Name="FirstBalanceFormat">
+          <DataField>FirstBalanceFormat</DataField>
+        </Field>
+        <Field Name="FirstCostAmount">
+          <DataField>FirstCostAmount</DataField>
+        </Field>
+        <Field Name="FirstCostAmountFormat">
+          <DataField>FirstCostAmountFormat</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="Location_Code">
+          <DataField>Location_Code</DataField>
+        </Field>
+        <Field Name="Location_Name">
+          <DataField>Location_Name</DataField>
+        </Field>
+        <Field Name="Item_Ledger_Entry__Entry_Type_">
+          <DataField>Item_Ledger_Entry__Entry_Type_</DataField>
+        </Field>
+        <Field Name="FirstBalance_Control1000000006">
+          <DataField>FirstBalance_Control1000000006</DataField>
+        </Field>
+        <Field Name="FirstBalance_Control1000000006Format">
+          <DataField>FirstBalance_Control1000000006Format</DataField>
+        </Field>
+        <Field Name="Quantity">
+          <DataField>Quantity</DataField>
+        </Field>
+        <Field Name="QuantityFormat">
+          <DataField>QuantityFormat</DataField>
+        </Field>
+        <Field Name="UnitCost">
+          <DataField>UnitCost</DataField>
+        </Field>
+        <Field Name="UnitCostFormat">
+          <DataField>UnitCostFormat</DataField>
+        </Field>
+        <Field Name="FirstCostAmount_Control1000000025">
+          <DataField>FirstCostAmount_Control1000000025</DataField>
+        </Field>
+        <Field Name="FirstCostAmount_Control1000000025Format">
+          <DataField>FirstCostAmount_Control1000000025Format</DataField>
+        </Field>
+        <Field Name="FirstBalance_Control1000000019">
+          <DataField>FirstBalance_Control1000000019</DataField>
+        </Field>
+        <Field Name="FirstBalance_Control1000000019Format">
+          <DataField>FirstBalance_Control1000000019Format</DataField>
+        </Field>
+        <Field Name="Item_Ledger_Entry__Entry_Type__Control1000000021">
+          <DataField>Item_Ledger_Entry__Entry_Type__Control1000000021</DataField>
+        </Field>
+        <Field Name="DocumentNo_Control1000000022">
+          <DataField>DocumentNo_Control1000000022</DataField>
+        </Field>
+        <Field Name="Item_Ledger_Entry__Posting_Date__Control1000000023">
+          <DataField>Item_Ledger_Entry__Posting_Date__Control1000000023</DataField>
+        </Field>
+        <Field Name="FirstCostAmount_Control1000000026">
+          <DataField>FirstCostAmount_Control1000000026</DataField>
+        </Field>
+        <Field Name="FirstCostAmount_Control1000000026Format">
+          <DataField>FirstCostAmount_Control1000000026Format</DataField>
+        </Field>
+        <Field Name="Continues____">
+          <DataField>Continues____</DataField>
+        </Field>
+        <Field Name="FirstBalance_Control1000000016">
+          <DataField>FirstBalance_Control1000000016</DataField>
+        </Field>
+        <Field Name="FirstBalance_Control1000000016Format">
+          <DataField>FirstBalance_Control1000000016Format</DataField>
+        </Field>
+        <Field Name="NegativeAmount">
+          <DataField>NegativeAmount</DataField>
+        </Field>
+        <Field Name="NegativeAmountFormat">
+          <DataField>NegativeAmountFormat</DataField>
+        </Field>
+        <Field Name="PositiveAmount">
+          <DataField>PositiveAmount</DataField>
+        </Field>
+        <Field Name="PositiveAmountFormat">
+          <DataField>PositiveAmountFormat</DataField>
+        </Field>
+        <Field Name="FirstCostAmount_Control1000000008">
+          <DataField>FirstCostAmount_Control1000000008</DataField>
+        </Field>
+        <Field Name="FirstCostAmount_Control1000000008Format">
+          <DataField>FirstCostAmount_Control1000000008Format</DataField>
+        </Field>
+        <Field Name="QtyCaptionLbl">
+          <DataField>QtyCaptionLbl</DataField>
+        </Field>
+        <Field Name="QtyCaptionAcumLbl">
+          <DataField>QtyCaptionAcumLbl</DataField>
+        </Field>
+        <Field Name="InventoryCaption">
+          <DataField>InventoryCaption</DataField>
+        </Field>
+        <Field Name="Description_Caption">
+          <DataField>Description_Caption</DataField>
+        </Field>
+        <Field Name="Item__Caption">
+          <DataField>Item__Caption</DataField>
+        </Field>
+        <Field Name="QtyCaption">
+          <DataField>QtyCaption</DataField>
+        </Field>
+        <Field Name="Entry_TypeCaption">
+          <DataField>Entry_TypeCaption</DataField>
+        </Field>
+        <Field Name="Document_No_Caption">
+          <DataField>Document_No_Caption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption_Control1102200021">
+          <DataField>AmountCaption_Control1102200021</DataField>
+        </Field>
+        <Field Name="AmountCaption_Control1102200022">
+          <DataField>AmountCaption_Control1102200022</DataField>
+        </Field>
+        <Field Name="Total_Caption">
+          <DataField>Total_Caption</DataField>
+        </Field>
+        <Field Name="Item_Ledger_Entry_Entry_No_">
+          <DataField>Item_Ledger_Entry_Entry_No_</DataField>
+        </Field>
+        <Field Name="Item_Ledger_Entry_Item_No_">
+          <DataField>Item_Ledger_Entry_Item_No_</DataField>
+        </Field>
+        <Field Name="InitialDate_">
+          <DataField>InitialDate_</DataField>
+        </Field>
+        <Field Name="InitialDate_Format">
+          <DataField>InitialDate_Format</DataField>
+        </Field>
+        <Field Name="FinalDate_">
+          <DataField>FinalDate_</DataField>
+        </Field>
+        <Field Name="FinalDate_Format">
+          <DataField>FinalDate_Format</DataField>
+        </Field>
+        <Field Name="UnitCostLbl">
+          <DataField>UnitCostLbl</DataField>
+        </Field>
+        <Field Name="ExtCostLbl">
+          <DataField>ExtCostLbl</DataField>
+        </Field>
+        <Field Name="TotalCost">
+          <DataField>TotalCost</DataField>
+        </Field>
+        <Field Name="TotalCostFormat">
+          <DataField>TotalCostFormat</DataField>
+        </Field>
+        <Field Name="Total_Cus_Caption">
+          <DataField>Total_Cus_Caption</DataField>
+        </Field>
+        <Field Name="Total_Quant_Caption">
+          <DataField>Total_Quant_Caption</DataField>
+        </Field>
+        <Field Name="InitialBalanceLbl">
+          <DataField>InitialBalanceLbl</DataField>
+        </Field>
+        <Field Name="LocationLbl">
+          <DataField>LocationLbl</DataField>
+        </Field>
+        <Field Name="InventoryIDLbl">
+          <DataField>InventoryIDLbl</DataField>
+        </Field>
+        <Field Name="Total_LocationLbl">
+          <DataField>Total_LocationLbl</DataField>
+        </Field>
+        <Field Name="Total_InventoryIDLbl">
+          <DataField>Total_InventoryIDLbl</DataField>
+        </Field>
+        <Field Name="TotalCostinit">
+          <DataField>TotalCostinit</DataField>
+        </Field>
+        <Field Name="TotalCostinitFormat">
+          <DataField>TotalCostinitFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

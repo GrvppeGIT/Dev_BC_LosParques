@@ -437,7 +437,7 @@ report 50100 "PDR.Kardex Produtos CL"
         KardexCaptionLbl: Label 'Kardex';
 
 
-        QtyCaptionAcumLbl: Label 'Cantidad Unid; Almac.';
+        QtyCaptionAcumLbl: Label 'Cantidad Unid. Almac.';
         QtyCaptionLbl: Label 'Cantidad';
         InformErr: Label 'Please inform the period and Location';
         Text50003: Label 'Initial Inventory in ';

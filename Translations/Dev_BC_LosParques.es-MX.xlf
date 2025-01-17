@@ -2,7 +2,254 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
   <file datatype="xml" source-language="en-US" target-language="es-MX" original="Dev_BC_LosParques">
     <body>
-      <group id="body"/>
+      <group id="body">
+        <trans-unit id="Report 254325910 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kardex Produtos.</source>
+          <target>Balanza de Comprabación Inventario</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3285233284" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>Importe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType AmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1246058317" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>Importe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType AmountCaption_Control1102200021Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 4071782316" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>Importe</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType AmountCaption_Control1102200022Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1987762555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Page</source>
+          <target>Pag.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType CurrReport_PAGENOCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 35837468" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Fecha</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType DateCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3335031239" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description:</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Description_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2124006630" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>No. Documento</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Document_No_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1062544513" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Type</source>
+          <target>Tipo Mov.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Entry_TypeCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2729289764" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Costo Ext.</source>
+          <target>Costo Ext.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType ExtCostLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3330130660" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Guia No.</source>
+          <target>Guia No.</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Nº Guia</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType GuiaLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3023109992" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please inform the period and Location</source>
+          <target>Por favor informar periodo y/o Almace</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType InformErr</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2647080326" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Balance :</source>
+          <target>Saldo Inicial:</target>
+          <note from="Developer" annotates="general" priority="2">ESM=SaldoInicial:</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType InitialBalanceLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2822905682" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Inventory</source>
+          <target>Inventario</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType InventoryCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2624192879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item :</source>
+          <target>Producto :</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Producto :</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType InventoryIDLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 478021995" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item :</source>
+          <target>Producto :</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Item__CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 82904815" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kardex</source>
+          <target>Balanza de Comprabación Inventario</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType KardexCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3629245473" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location :</source>
+          <target>Almacen :</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Almacen:</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType LocationLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2294932822" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad Unid. Almac.</source>
+          <target>Cantidad Unid. Almac</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType QtyCaptionAcumLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3037909084" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad</source>
+          <target>Cantidad</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType QtyCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1079304508" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ReferenceNo No.</source>
+          <target>No. Referencia</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Número Referencia</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType ReferenceNoLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3363895267" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specific Cost</source>
+          <target>Costo Especifico</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Costo Especifico</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType SpecificCostLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1290161461" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Inventory in </source>
+          <target></target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Text50003</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3102655787" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total:</source>
+          <target>Total:</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Total_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2335826901" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Custo</source>
+          <target>Total Costo</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Total_Cus_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 2870397332" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Item :</source>
+          <target>Total Producto :</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Total Producto :</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Total_InventoryIDLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 675193294" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Location :</source>
+          <target>Total Almacen :</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Total Almacen :</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Total_LocationLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1993852907" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Quantidade</source>
+          <target>Total Cantidad</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType Total_Quant_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3805222182" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction Date</source>
+          <target>Fecha de Transacción</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Fecha de Transacción</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType TransactionDateLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 4287224170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction Type</source>
+          <target>Tipo Transacción</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Tipo Transacción</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType TransactionTypeLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 1810982662" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unitary Transaction</source>
+          <target>Transacción Unitari</target>
+          <note from="Developer" annotates="general" priority="2">ESM=Transacción Unitaria</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType UnitaryTransactionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - NamedType 3675848865" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Costo. Unitario</source>
+          <target>Costo. Unitari</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - NamedType UnitCostLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 556461562 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control &lt;Control3&gt; - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 156672739 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Fecha Final</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control EndDateField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 156672739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Fecha Final</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control EndDateField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 1814255230 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>End Date</source>
+          <target>Fecha Final</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control LocationCodeField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 1814255230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Filter</source>
+          <target>Almacen Filtro</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control LocationCodeField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 3411122186 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Date</source>
+          <target>Fecha Inicial</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control StartDateField - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 254325910 - Control 3411122186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Date</source>
+          <target>Fecha Inicial</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report PDR.Kardex Produtos CL - Control StartDateField - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3468942591 - Control 3080887751 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
+          <source>Specifies the vendor's market type to link business transactions made for the vendor with the appropriate account in the general ledger.</source>
+          <target>Especifica el tipo de mercado del proveedor para vincular las transacciones comerciales realizadas para el proveedor con la cuenta correspondiente en el libro mayor.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PDR Vendor Ledger Entries - Control PDRVendorPostingGroup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3468942591 - Control 3080887751 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1567633909">
+          <source>Vendor Posting Group</source>
+          <target>Grupo de contabilización de proveedores</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension PDR Vendor Ledger Entries - Control PDRVendorPostingGroup - Property Caption</note>
+        </trans-unit>
+      </group>
     </body>
   </file>
 </xliff>
