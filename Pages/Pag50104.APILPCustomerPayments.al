@@ -115,6 +115,14 @@ page 50104 "APILP - Customer Payments"
                 {
                     Caption = 'External Document No.';
                 }
+                field(paymentMethodCode; Rec."Payment Method Code")
+                {
+                    Caption = 'Payment Method Code';
+                    trigger OnValidate()
+                    begin
+                        tmpPaymentMethodCode := Rec."Payment Method Code";
+                    end;
+                }
                 field(amount; Rec.Amount)
                 {
                     Caption = 'Amount';
@@ -318,6 +326,9 @@ page 50104 "APILP - Customer Payments"
             Rec.Validate("Bal. Account No.", tmpBalAccNo);
         end;
 
+        if tmpPaymentMethodCode <> '' then
+            Rec.Validate("Payment Method Code", tmpPaymentMethodCode);
+
         SetCalculatedFields();
     end;
 
@@ -379,6 +390,7 @@ page 50104 "APILP - Customer Payments"
         BlankGUID: Guid;
         tmpBalAccType: enum "Gen. Journal Account Type";
         tmpBalAccNo: code[20];
+        tmpPaymentMethodCode: code[20];
 
     local procedure TransferGeneratedFieldsFromInitializeLine(var GenJournalLine: Record "Gen. Journal Line")
     begin
