@@ -4,7 +4,7 @@ using Microsoft.Finance.GeneralLedger.Journal;
 using Microsoft.Bank.Payment;
 using Microsoft.Foundation.NoSeries;
 
-pageextension 50101 "FJH Payment Journal Ext" extends "Payment Journal"
+pageextension 50104 "FJH Payment Journal Ext" extends "Payment Journal"
 {
     actions
     {
