@@ -11,7 +11,12 @@
   "url": "https://www.grvppe.com",
   "logo": "Logo/logo_grvppe_240x240_branco.png",
   "dependencies": [
-
+    {
+      "id": "22899dfc-a32b-4e77-8df0-67d1086f224c",
+      "name": "CLFinances Billing",
+      "publisher": "FJH Sistemas de Informação eireli (Grvppe)",
+      "version": "25.1.120.107"
+    }
   ],
   "screenshots": [],
   "platform": "25.0.0.0",
