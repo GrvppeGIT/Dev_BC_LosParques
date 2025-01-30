@@ -1,41 +1,52 @@
 {
-  "id": "27167bb4-2189-4ed1-b8e8-3296a4cc35a2",
-  "name": "Dev_BC_LosParques",
-  "publisher": "FJH Sistemas de Informação eireli (Grvppe)",
-  "version": "24.1.1.2",
-  "brief": "Additional features Los Parques",
-  "description": "Additional features for Microsoft Dynamics 365 Business Central",
-  "privacyStatement": "https://www.grvppe.com/politicas-de-privacidade",
-  "EULA": "https://www.grvppe.com",
-  "help": "",
-  "url": "https://www.grvppe.com",
-  "logo": "Logo/logo_grvppe_240x240_branco.png",
-  "dependencies": [
-    {
+    "id": "27167bb4-2189-4ed1-b8e8-3296a4cc35a2",
+    "name": "Dev_BC_LosParques",
+    "publisher": "FJH Sistemas de Informação eireli (Grvppe)",
+    "version": "24.1.1.14",
+    "brief": "Additional features Los Parques",
+    "description": "Additional features for Microsoft Dynamics 365 Business Central",
+    "privacyStatement": "https://www.grvppe.com/politicas-de-privacidade",
+    "EULA": "https://www.grvppe.com",
+    "help": "",
+    "url": "https://www.grvppe.com",
+    "logo": "Logo/logo_grvppe_240x240_branco.png",
+    "dependencies": [
+        {
+            "id": "10cb69d9-bc8a-4d27-970a-9e110e9db2a5",
+            "name": "_Exclude_APIV2_",
+            "publisher": "Microsoft",
+            "version": "25.0.0.0"
+        },
+        {
+            "id": "ce3ff378-07ed-4d4e-a30b-2374b348ab75",
+            "name": "CoreLatam",
+            "publisher": "FJH Sistemas de Informação eireli (Grvppe)",
+            "version": "25.1.120.207"
+        },
+          {
       "id": "22899dfc-a32b-4e77-8df0-67d1086f224c",
       "name": "CLFinances Billing",
       "publisher": "FJH Sistemas de Informação eireli (Grvppe)",
       "version": "25.1.120.107"
     }
-
-  ],
-  "screenshots": [],
-  "platform": "25.0.0.0",
-  "application": "25.0.0.0",
-  "idRanges": [
-    {
-      "from": 50100,
-      "to": 50149
-    }
-  ],
-  "resourceExposurePolicy": {
-    "allowDebugging": true,
-    "allowDownloadingSource": true,
-    "includeSourceInSymbolFile": true
-  },
-  "runtime": "14.0",
-  "features": [
-    "NoImplicitWith",
-    "TranslationFile"
-  ]
+    ],
+    "screenshots": [],
+    "platform": "25.0.0.0",
+    "application": "25.1.25873.25976",
+    "idRanges": [
+        {
+            "from": 50100,
+            "to": 50149
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": false,
+        "includeSourceInSymbolFile": false
+    },
+    "runtime": "14.0",
+    "features": [
+        "NoImplicitWith",
+        "TranslationFile"
+    ]
 }

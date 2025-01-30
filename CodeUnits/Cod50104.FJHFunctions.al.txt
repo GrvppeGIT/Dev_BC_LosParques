@@ -1,0 +1,285 @@
+namespace Dev_BC_LosParques.Dev_BC_LosParques;
+
+using Microsoft.Purchases.Payables;
+
+codeunit 50104 "FJH Functions"
+{
+               
+                procedure ChangeExtDocNumberfromVLE(vle: Record "Vendor Ledger Entry"; cToNumberExt:Code[35])
+                var
+                    flag: Boolean;
+                    oDocTypeValue: Option " ","Sales Shipment","Sales Invoice","Sales Return Receipt","Sales Credit Memo","Purchase Receipt","Purchase Invoice","Purchase Return Shipment","Purchase Credit Memo","Transfer Shipment","Transfer Receipt","Service Shipment","Service Invoice","Service Credit Memo";
+                begin
+                    
+
+
+
+
+
+
+
+
+
+
+                    //Agrego un control para Asegurar que no exista este numero
+                    if cFromNumber = '' then
+                        ERROR('Debe cargar un Número de Documento de Origen');
+                    DocType();
+                    //Caso de tipo de documento
+                    //oDocumentType ,Payment,Invoice,Credit Memo,Finance Charge Memo,Reminder,Refund,,,,,Shipment
+                    if cToDocType = '' then
+                        cToDocType := cFromDocType;
+                    if cToNumberExt = '' then
+                        cToNumberExt := cFromNumberExt;
+                    //CS1.20 - Begin
+                    if cToPostingDate = 0D then
+                        cToPostingDate := cFromPostingDate;
+                    //CS1.20 - END
+                    //Motus9.02 - Begin
+                    if ctoDocumentDate = 0D then
+                        ctoDocumentDate := cFromDocumentDate;
+                    //Motus9.02 - END
+                    //Validate data - MtsLat10.00
+                    case oDocumentType of
+                        oDocumentType::Invoice:
+                            ValidateShipmentDate();
+                        oDocumentType::"Credit Memo":
+                            ValidateReturnDate();
+                    end;
+                    //Motus
+                    flag := true;
+                    case oDocumentType of
+                        oDocumentType::Payment:
+                            flag := false;
+                        oDocumentType::Invoice:
+                            oDocTypeValue := oDocTypeValue::"Purchase Invoice";
+                        oDocumentType::"Credit Memo":
+                            oDocTypeValue := oDocTypeValue::"Purchase Credit Memo";
+                        oDocumentType::Shipment:
+                            oDocTypeValue := oDocTypeValue::"Purchase Receipt";
+                    end;
+                    //CS1.04
+                    recGLEntry.reset();
+                    recGLEntry.SETCURRENTKEY("Document Type", "External Document No.");
+                    recGLEntry.SETRANGE("Document Type", oDocumentType);
+                    recGLEntry.SETRANGE("External Document No.", cToNumberExt);
+                    recGLEntry.SETRANGE("Source Type", recGLEntry."Source Type"::Vendor); //recGLEntry.SETFILTER("Source Code", 'Purch');
+                    recGLEntry.SETRANGE("Source No.", cVendorCode);//  Motus9.01
+                    if recGLEntry.FindFirst() then
+                        if (cToNumberExt <> cFromNumberExt) then //Motus
+                            ERROR(TextDuplicado, cToNumberExt);
+                    recGLEntry.reset();
+                    recGLEntry.SETCURRENTKEY("Document Type", "Document No.");
+                    recGLEntry.SETRANGE("Document Type", oDocumentType);
+                    recGLEntry.SETRANGE("Document No.", cFromNumber);
+                    recGLEntry.SETRANGE("Source Type", recGLEntry."Source Type"::Vendor); //CS4.03 RHM
+                    recGLEntry.SETRANGE("Source No.", cVendorCode);//  Motus9.01
+                    if recGLEntry.FindFirst() then
+                        repeat
+                            recGLEntry."External Document No." := cToNumberExt;
+                            recGLEntry."FJH.Document Type Code" := cToDocType;
+                            recGLEntry."Posting Date" := cToPostingDate;//Motus
+                            recGLEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                            recGLEntry.Modify();
+                        until recGLEntry.NEXT() = 0;
+                    recVendorLedgEntry.reset();
+                    recVendorLedgEntry.SETCURRENTKEY("Document No.", "Document Type", "Vendor No.");
+                    recVendorLedgEntry.SETRANGE("Document Type", oDocumentType);
+                    recVendorLedgEntry.SETRANGE("Document No.", cFromNumber);
+                    if recVendorLedgEntry.FindFirst() then
+                        repeat
+                            recVendorLedgEntry."External Document No." := cToNumberExt;
+                            recVendorLedgEntry."FJH.Document Type Code" := cToDocType;
+                            recVendorLedgEntry."Posting Date" := cToPostingDate;
+                            recVendorLedgEntry."Document Date" := ctoDocumentDate;
+                            recVendorLedgEntry.Modify();
+                        until recVendorLedgEntry.NEXT() = 0;
+
+                    recDetVendorLedgEntry.reset();
+                    recDetVendorLedgEntry.SETCURRENTKEY("Document No.", "Document Type", "Posting Date");
+                    recDetVendorLedgEntry.SETRANGE("Document Type", oDocumentType);
+                    recDetVendorLedgEntry.SETRANGE("Document No.", cFromNumber);
+                    if recDetVendorLedgEntry.FindFirst() then
+                        repeat
+                            //recDetVendorLedgEntry."External Document No." := cToNumberExt;
+                            //recDetVendorLedgEntry."Document Type Code" := cToDocType; 
+                            recDetVendorLedgEntry."Posting Date" := cToPostingDate;
+                            //recDetVendorLedgEntry."Document Date" :=  cToDocumentDate;// Motus9.02
+                            recDetVendorLedgEntry.Modify();
+                        until recDetVendorLedgEntry.NEXT() = 0;
+
+                    /*-- recPurchCommentLine : No se analiza comentarios porque modifica Nro Externo*/
+                    /*-- PAGOS ---*/
+                    recAPLine.reset();
+                    recAPLine.SETCURRENTKEY("Applies-to Doc. Type", "Applies-to Doc. No.");
+                    recAPLine.SETRANGE("Applies-to Doc. Type", oDocumentType);
+                    recAPLine.SETRANGE("Applies-to Doc. No.", cFromNumber);
+                    if recAPLine.FindFirst() then
+                        repeat
+                            recAPLine."External Document No." := cToNumberExt;
+                            recAPLine.Modify();
+                        until recAPLine.NEXT() = 0;
+                    //----------------------------------  Remitos -------------------------------
+                    if oDocumentType = oDocumentType::Shipment then begin
+                        recPurchShipHeader.reset();
+                        recPurchShipHeader.SETRANGE("No.", cFromNumber);
+                        if recPurchShipHeader.FindFirst() then begin
+                            recPurchShipHeader."Vendor Shipment No." := cToNumberExt;
+                            recPurchShipHeader."Posting Date" := cToPostingDate;//Motus
+                            recPurchShipHeader."Document Date" := ctoDocumentDate;// Motus9.02
+                            recPurchShipHeader.Modify();
+                        end;
+                        //MtsLat10.01 - Begin Fixed Warehouse
+                        recPostedWhseReceiptLine.reset();
+                        recPostedWhseReceiptLine.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.", "Posted Source Document", "Posted Source No.");
+                        recPostedWhseReceiptLine.SETRANGE("Posted Source Document", recPostedWhseReceiptLine."Posted Source Document"::"Posted Receipt");
+                        recPostedWhseReceiptLine.SETRANGE("Posted Source No.", cFromNumber);
+                        if recPostedWhseReceiptLine.FindFirst() then
+                            repeat
+                                recPostedWhseReceiptLine."Posting Date" := cToPostingDate;//Motus
+                                recPostedWhseReceiptLine.Modify();
+                            until recPostedWhseReceiptLine.NEXT() = 0;
+                        recWarehouseEntry.reset();
+                        recWarehouseEntry.SETCURRENTKEY("Reference No.", "Registering Date");
+                        recWarehouseEntry.SETRANGE("Reference No.", cFromNumber);
+                        if recWarehouseEntry.FindFirst() then
+                            repeat
+                                recWarehouseEntry."Registering Date" := cToPostingDate;//Motus
+                                recWarehouseEntry.Modify();
+                            until recWarehouseEntry.NEXT() = 0;
+                        //MtsLat10.01 - End
+                    end;
+                    /*--- recPurchShipLine ---*/
+                    //----------------------------------  Facturas -------------------------------
+                    if oDocumentType = oDocumentType::Invoice then begin
+                        recPurchInvHeader.reset();
+                        recPurchInvHeader.SETRANGE("No.", cFromNumber);
+                        if recPurchInvHeader.FindFirst() then begin
+                            recPurchInvHeader."Vendor Invoice No." := cToNumberExt;
+                            recPurchInvHeader."FJH.Document Type Code" := cToDocType;
+                            recPurchInvHeader."Posting Date" := cToPostingDate;//Motus
+                            recPurchInvHeader."Document Date" := ctoDocumentDate;// Motus9.02
+                            recPurchInvHeader.Modify();
+                        end;
+                        recPurchInvLine.reset();
+                        recPurchInvLine.SETRANGE("Document No.", cFromNumber);
+                        recPurchInvLine.SETFILTER("FJH.W/P Tax Entry No.", '<>0');
+                        if recPurchInvLine.FindFirst() then
+                            repeat
+                                if recWPtaxEntry.GET(recPurchInvLine."FJH.W/P Tax Entry No.") then begin
+                                    recWPtaxEntry."Vendor Document No." := cToNumberExt;
+                                    recWPtaxEntry."Posting Document Type Code" := cToDocType;
+                                    recWPtaxEntry."Posting Date" := cToPostingDate;//Motus
+                                    recWPtaxEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                                    recWPtaxEntry.Modify();
+                                end;
+                            until recPurchInvLine.NEXT() = 0;
+                    end;
+                    /*--- recPurchInvLine ---*/
+                    //----------------------------------  Notas de Credito -------------------------------
+                    if oDocumentType = oDocumentType::"Credit Memo" then begin
+                        recPurchCRHeader.reset();
+                        recPurchCRHeader.SETRANGE("No.", cFromNumber);
+                        if recPurchCRHeader.FindFirst() then begin
+                            recPurchCRHeader."Vendor Cr. Memo No." := cToNumberExt;
+                            recPurchCRHeader."FJH.Document Type Code" := cToDocType;
+                            recPurchCRHeader."Posting Date" := cToPostingDate;//Motus
+                            recPurchCRHeader."Document Date" := ctoDocumentDate;// Motus9.02
+                            recPurchCRHeader.Modify();
+                        end;
+                        recPurchCRLine.reset();
+                        recPurchCRLine.SETRANGE("Document No.", cFromNumber);
+                        recPurchCRLine.SETFILTER("FJH.W/P Tax Entry No.", '<>0');
+                        if recPurchCRLine.FindFirst() then
+                            repeat
+                                if recWPtaxEntry.GET(recPurchCRLine."FJH.W/P Tax Entry No.") then begin
+                                    recWPtaxEntry."Vendor Document No." := cToNumberExt;
+                                    recWPtaxEntry."Posting Document Type Code" := cToDocType;
+                                    recWPtaxEntry."Posting Date" := cToPostingDate;//Motus
+                                    recWPtaxEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                                    recWPtaxEntry.Modify();
+                                end;
+                            until recPurchCRLine.NEXT() = 0;
+                    end;
+                    /*--- recPurchCRLine ---*/
+                    recItemLedgEntry.reset();
+                    recItemLedgEntry.SETCURRENTKEY("Document No.", "Document Type", "Document Line No.");
+                    recItemLedgEntry.SETRANGE("Entry Type", recItemLedgEntry."Entry Type"::Purchase);
+                    recItemLedgEntry.SETRANGE("Document Type", oDocTypeValue); //---- Dimensiones ----
+                    recItemLedgEntry.SETRANGE("Document No.", cFromNumber);
+                    if recItemLedgEntry.FindFirst() then
+                        repeat
+                            recItemLedgEntry."External Document No." := cToNumberExt;
+                            recItemLedgEntry."Posting Date" := cToPostingDate;//Motus
+                            recItemLedgEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                            recItemLedgEntry.Modify();
+                        until recItemLedgEntry.NEXT() = 0;
+
+                    recVatEntry.reset();
+                    recVatEntry.SETRANGE("Document Type", oDocumentType);
+                    recVatEntry.SETRANGE("Document No.", cFromNumber);
+                    recVatEntry.SETRANGE(Type, recVatEntry.Type::Purchase);  // --- recDetVendorLedgEntry ---
+                    if recVatEntry.FindFirst() then
+                        repeat
+                            recVatEntry."External Document No." := cToNumberExt;
+                            recVatEntry."Posting Date" := cToPostingDate;//Motus
+                            recVatEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                            recVatEntry.Modify();
+                        until recVatEntry.NEXT() = 0;
+                    /*Motus RHM*/
+                    /*Motus RHM*/
+                    recValueEntry.reset();
+                    recValueEntry.SETRANGE("Document No.", cFromNumber);
+                    recValueEntry.SETRANGE("Document Type", oDocTypeValue);  //MotusLoc1.04 RHM
+                    recValueEntry.SETRANGE(Type, recVatEntry.Type::Purchase);  //MotusLoc1.04 RHM
+                    if recValueEntry.FindFirst() then
+                        repeat
+                            recValueEntry."External Document No." := cToNumberExt;
+                            recValueEntry."Posting Date" := cToPostingDate;//Motus
+                            recValueEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                            recValueEntry.Modify();
+                        until recValueEntry.NEXT() = 0;
+                    if flag then  //Motus
+                     begin
+                        recValueEntry.reset();
+                        recValueEntry.SETRANGE("Document No.", cFromNumber);
+                        recValueEntry.SETRANGE("Document Type", oDocTypeValue); //Motus RHM
+                        if recValueEntry.FindFirst() then
+                            repeat
+                                recValueEntry."External Document No." := cToNumberExt;
+                                recValueEntry."Posting Date" := cToPostingDate;//Motus
+                                recValueEntry."Document Date" := ctoDocumentDate;// Motus9.02
+                                recValueEntry.Modify();
+                                recValueEntryRelation.reset();
+                                recValueEntryRelation.SETRANGE("Value Entry No.", recValueEntry."Entry No.");
+                                if recValueEntryRelation.FindFirst() then
+                                    repeat
+                                        ilarge := STRLEN(cFromNumber);
+                                        iposition := STRPOS(recValueEntryRelation."Source RowId", cFromNumber);
+                                        spartial := DELSTR(recValueEntryRelation."Source RowId", iposition, ilarge);
+                                        spartial1 := INSSTR(spartial, cToNumberExt, iposition);
+                                        recValueEntryRelation."Source RowId" := spartial1;
+                                        recValueEntryRelation.Modify();
+                                    until recValueEntryRelation.NEXT() = 0;
+                                //Inicio 1.03 - Ajusta el numero de documento de los asientos de costeo relacionados ver 1.03
+                                recGLItemLedgerRelation.reset();
+                                recGLItemLedgerRelation.SETCURRENTKEY("Value Entry No.");
+                                recGLItemLedgerRelation.SETRANGE("Value Entry No.", recValueEntry."Entry No.");
+                                if recGLItemLedgerRelation.FindFirst() then
+                                    repeat
+                                        recGLEntryCost.GET(recGLItemLedgerRelation."G/L Entry No.");
+                                        recGLEntryCost."External Document No." := cToNumberExt;
+                                        recGLEntryCost."Posting Date" := cToPostingDate;//Motus
+                                        recGLEntryCost."Document Date" := ctoDocumentDate;// Motus9.02
+                                        recGLEntryCost.Modify();
+                                    until recGLItemLedgerRelation.NEXT() = 0;
+                            //fin 1.03
+                            until recValueEntry.NEXT() = 0;
+                    end;
+                    //MtsLat10.01 - End
+                    CleanVar();
+                    MESSAGE('Renumeracion Finalizada');
+                end;
+
+*/
+}

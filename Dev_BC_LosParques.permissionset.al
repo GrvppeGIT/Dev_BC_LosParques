@@ -1,0 +1,30 @@
+permissionset 50101 Dev_BC_LosParques
+{
+    Assignable = true;
+    Permissions = tabledata "LP Cust. Ledger Entry Buffer" = RIMD,
+        table "LP Cust. Ledger Entry Buffer" = X,
+        codeunit "FJH CT-Fill Export Buffer" = X,
+        codeunit "FJH GL Subscriptions" = X,
+        codeunit "FJH Payments Subscriptions" = X,
+        xmlport "FJH Banco CL Payment Export" = X,
+        xmlport "FJH Santander Payment Export" = X,
+        page "APILP - Assembly Order Header" = X,
+        page "APILP - Assembly Order Lines" = X,
+        page "APILP - Cust. Paym. Journals" = X,
+        page "APILP - Customer Payments" = X,
+        page "APILP - CustomerApplyEntry" = X,
+        page "APILP - Customers" = X,
+        page "APILP - G/L Entries" = X,
+        page "APILP - JournalLines" = X,
+        page "APILP - Journals" = X,
+        page "APILP - Sales Cr. Memo" = X,
+        page "APILP - Sales Credit Mem Lines" = X,
+        page "APILP - Sales Invoice Lines" = X,
+        page "APILP - Sales Invoices" = X,
+        page "APILP - Sales Order Lines" = X,
+        page "APILP - Sales Orders" = X,
+        page "APILP - Sales Shipment Lines" = X,
+        page "APILP - Sales Shipments" = X,
+        page "APILP - Ship-to Address" = X,
+        page "APILP Sales Invoices" = X;
+}
