@@ -110,6 +110,7 @@ pageextension 50104 "FJH Payment Journal Ext" extends "Payment Journal"
                     DimSetID: integer;
                     PaymentMethodCode: Code[20];
                     ErrBankAcctNotFound: label 'Balancing Bank Account not found';
+                    TempDimSetId: integer;
                 begin
 
                     TotalBalance := 0;
@@ -139,12 +140,15 @@ pageextension 50104 "FJH Payment Journal Ext" extends "Payment Journal"
                         error(ErrBankAcctNotFound);
                     if GenJnlLine.FindSet() then
                         repeat
+                            TempDimSetId := GenJnlLine."Dimension Set ID";
                             if GenJnlLine."Document Type" <> DocumentType then
                                 GenJnlLine.Validate("Document Type", DocumentType);
                             if GenJnlLine."Document No." <> DocumentNo then
                                 GenJnlLine.Validate("Document No.", DocumentNo);
                             GenJnlLine.Validate("Bal. Account No.", '');
                             //GenJnlLine.Validate("Bal. Account Type", GenJnlLine."Bal. Account Type"::"G/L Account");
+                            if GenJnlLine."Dimension Set ID" <> TempDimSetId then
+                                GenJnlLine.Validate("Dimension Set ID", TempDimSetId);
                             GenJnlLine.Modify();
                         until GenJnlLine.Next() = 0;
 

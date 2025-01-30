@@ -455,10 +455,14 @@ xmlport 50101 "FJH Banco CL Payment Export"
                         end;
                     end;
 
-                    if MedioDePago = '04' then
-                        OficinaDestino := paymentexportdata."FJH Destination Branch"
-                    else
-                        OficinaDestino := '   ';
+                    Case MedioDePago of
+                        '04':
+                            OficinaDestino := paymentexportdata."FJH Destination Branch";
+                        '02':
+                            OficinaDestino := '000'
+                        else
+                            OficinaDestino := '   ';
+                    End;
 
                     DescripcionPago := paymentexportdata."Message to Recipient 1";
                     ValeVistaAcumulado := 'N';

@@ -263,6 +263,11 @@ page 50117 "APILP - Sales Shipments"
                     Caption = 'Status Authorization', Comment = 'ESM=Estado de autorización';
                     Editable = false;
                 }
+                field(fiscalDocumentNo; Rec."FJH.Fiscal Document No.")
+                {
+                    Caption = 'Fiscal Document No.', Comment = 'ESM=Nº documento fiscal';
+                    Editable = false;
+                }
             }
         }
     }
