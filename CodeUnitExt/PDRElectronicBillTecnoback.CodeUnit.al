@@ -9,9 +9,8 @@ codeunit 50120 PDRElectronicBillTecnoback
         FJHElectBillFunctions: Codeunit "FJH.Elect. Bill. Functions";
 
     [EventSubscriber(ObjectType::Codeunit, 35004507, SalesShipmentDetail_Json, '', false, false)]
-    local procedure CU414_OnBeforeModifySalesDoc(SalesShipmentLine: Record "Sales Shipment Line"; var JsonAPIArray: JsonArray; var I: Integer; var IsHandled: Boolean)
+    local procedure SalesShipmentDetail_Json(SalesShipmentLine: Record "Sales Shipment Line"; var JsonAPIArray: JsonArray; var I: Integer; var IsHandled: Boolean)
     var
-
         PostedAssembleToOrderLink: Record "Posted Assemble-to-Order Link";
         PostedAssemblyLine: Record "Posted Assembly Line";
         JsonAPIObjectDetalle: JsonObject;
@@ -40,6 +39,29 @@ codeunit 50120 PDRElectronicBillTecnoback
             until PostedAssemblyLine.Next() = 0;
         IsHandled := true
 
+    end;
+
+    [EventSubscriber(ObjectType::Codeunit, 35004507, CalculateTotalAssembleAmounts, '', false, false)]
+    local procedure CalculateTotalAssembleAmounts(SalesShipmentLine: Record "Sales Shipment Line"; var ExentAmount: Decimal; var VATAmount: Decimal; var NetAmount: Decimal; var IsHandled: Boolean)
+    var
+        PostedAssembleToOrderLink: Record "Posted Assemble-to-Order Link";
+        PostedAssemblyLine: Record "Posted Assembly Line";
+    begin
+        IsHandled := false;
+        if not PostedAssembleToOrderLink.AsmExistsForPostedShipmentLine(SalesShipmentLine) then
+            exit;
+        PostedAssemblyLine.SetRange("Document No.", PostedAssembleToOrderLink."Assembly Document No.");
+        if (PostedAssemblyLine.FindSet()) then
+            repeat
+                if PostedAssemblyLine."Unit Cost" <> 0 then
+                    if (SalesShipmentLine."VAT %") = 0 then
+                        ExentAmount += PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity
+                    else begin
+                        VATAmount += (PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity) * SalesShipmentLine."VAT %" / 100;
+                        NetAmount += (PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity);
+                    end;
+            until PostedAssemblyLine.Next() = 0;
+        IsHandled := true
     end;
 
     local procedure UnmdItem(UnitCode: Code[10]): Code[4];
