@@ -645,7 +645,14 @@ page 50108 "APILP - Sales Orders"
                         RegisterFieldSet(Rec.FieldNo("FJH.Electronic Shipment"));
                     end;
                 }
-
+                field(hasWatermark; Rec."FJH.Has Watermark")
+                {
+                    Caption = 'Has Watermark', Comment = 'ESM=Lleva marca de agua';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo(Rec."FJH.Has Watermark"));
+                    end;
+                }
                 part(attachments; "APIV2 - Attachments")
                 {
                     Caption = 'Attachments';

@@ -1,4 +1,4 @@
-namespace Dev_BC_LosParques.Dev_BC_LosParques;
+namespace FJH.Dev_BC_LosParques;
 
 using Microsoft.Purchases.Vendor;
 

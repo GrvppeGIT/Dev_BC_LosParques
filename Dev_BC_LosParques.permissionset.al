@@ -26,5 +26,5 @@ permissionset 50101 Dev_BC_LosParques
         page "APILP - Sales Shipment Lines" = X,
         page "APILP - Sales Shipments" = X,
         page "APILP - Ship-to Address" = X,
-        page "APILP Sales Invoices" = X;
+        codeunit PDRElectronicBillTecnoback = X;
 }

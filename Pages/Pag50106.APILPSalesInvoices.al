@@ -702,6 +702,14 @@ page 50106 "APILP - Sales Invoices"
                     Editable = false;
                     Caption = 'Fiscal Document No.';
                 }
+                field(hasWatermark; Rec."FJH.Has Watermark")
+                {
+                    Caption = 'Has Watermark', Comment = 'ESM=Lleva marca de agua';
+                    trigger OnValidate()
+                    begin
+                        RegisterFieldSet(Rec.FieldNo(Rec."FJH.Has Watermark"));
+                    end;
+                }
                 part(attachments; "APIV2 - Attachments")
                 {
                     Caption = 'Attachments';

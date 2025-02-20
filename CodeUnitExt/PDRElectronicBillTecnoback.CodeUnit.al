@@ -67,16 +67,20 @@ codeunit 50120 PDRElectronicBillTecnoback
     [EventSubscriber(ObjectType::Codeunit, 35004507, AddKeySalesInvoiceHeader_Json, '', false, false)]
     local procedure AddKeySalesInvoiceHeader_Json(var JsonAPIObjectTitulo: JsonObject; SalesInvoiceHeader: Record "Sales Invoice Header")
     begin
+        if SalesInvoiceHeader."FJH.Has Watermark" then
+            JsonAPIObjectTitulo.add('marca_agua_pagado', 'SI')
+        else
+            JsonAPIObjectTitulo.add('marca_agua_pagado', 'NO');
 
-        JsonAPIObjectTitulo.add('marca_agua_pagado', 'NO');
-        //  "marca_agua_pagado":"NO",
     end;
 
     [EventSubscriber(ObjectType::Codeunit, 35004507, AddKeySalesCrMemoHeader_Json, '', false, false)]
     local procedure AddKeySalesCrMemoHeader_Json(var JsonAPIObjectTitulo: JsonObject; SalesCrMemoHeader: Record "Sales Cr.Memo Header")
     begin
-        JsonAPIObjectTitulo.add('marca_agua_pagado', 'NO');
-        //  "marca_agua_pagado":"NO",
+        if SalesCrMemoHeader."FJH.Has Watermark" then
+            JsonAPIObjectTitulo.add('marca_agua_pagado', 'SI')
+        else
+            JsonAPIObjectTitulo.add('marca_agua_pagado', 'NO');
     end;
 
     local procedure UnmdItem(UnitCode: Code[10]): Code[4];
