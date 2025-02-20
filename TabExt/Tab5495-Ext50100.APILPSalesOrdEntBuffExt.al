@@ -11,5 +11,10 @@ tableextension 50100 "APILP - Sales Ord Ent Buff Ext" extends "Sales Order Entit
             Caption = 'Assembly Id';
             DataClassification = CustomerContent;
         }
+        field(56101; "FJH.Has Watermark"; Boolean)
+        {
+            Caption = 'Has Watermark', Comment = 'ESM=Lleva marca de agua';
+            DataClassification = CustomerContent;
+        }
     }
 }
