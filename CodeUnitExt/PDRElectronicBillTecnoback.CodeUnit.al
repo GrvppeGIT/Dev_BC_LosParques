@@ -29,8 +29,10 @@ codeunit 50120 PDRElectronicBillTecnoback
                     JsonAPIObjectDetalle.add('NmbItem', FJHElectBillFunctions.SpecialCharactersNew(PostedAssemblyLine.Description));
                     JsonAPIObjectDetalle.add('QtyItem', FJHElectBillFunctions.FormatDecimalNoToText(PostedAssemblyLine.Quantity));
                     JsonAPIObjectDetalle.add('UnmdItem', UnmdItem(SalesShipmentLine."Unit of Measure Code"));
-                    JsonAPIObjectDetalle.add('PrcItem', FORMAT(PostedAssemblyLine."Unit Cost", 0, '<Integer>'));
-                    JsonAPIObjectDetalle.add('MontoItem', FORMAT(PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity, 0, '<Integer>'));
+                    JsonAPIObjectDetalle.add('PrcItem', 0);
+                    JsonAPIObjectDetalle.add('MontoItem', 0);
+                    //JsonAPIObjectDetalle.add('PrcItem', FORMAT(PostedAssemblyLine."Unit Cost", 0, '<Integer>'));
+                    //JsonAPIObjectDetalle.add('MontoItem', FORMAT(PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity, 0, '<Integer>'));
                     JsonAPIObjectDetalle.add('NroLinDet', FORMAT(I));
                     I += 1;
                     JsonAPIArray.add(JsonAPIObjectDetalle);
@@ -45,22 +47,27 @@ codeunit 50120 PDRElectronicBillTecnoback
     local procedure CalculateTotalAssembleAmounts(SalesShipmentLine: Record "Sales Shipment Line"; var ExentAmount: Decimal; var VATAmount: Decimal; var NetAmount: Decimal; var IsHandled: Boolean)
     var
         PostedAssembleToOrderLink: Record "Posted Assemble-to-Order Link";
-        PostedAssemblyLine: Record "Posted Assembly Line";
+    //PostedAssemblyLine: Record "Posted Assembly Line";
     begin
         IsHandled := false;
         if not PostedAssembleToOrderLink.AsmExistsForPostedShipmentLine(SalesShipmentLine) then
             exit;
+        ExentAmount += 0;
+        NetAmount += 0;
+        VATAmount += 0;
+        /*
         PostedAssemblyLine.SetRange("Document No.", PostedAssembleToOrderLink."Assembly Document No.");
         if (PostedAssemblyLine.FindSet()) then
-            repeat
-                if PostedAssemblyLine."Unit Cost" <> 0 then
-                    if (SalesShipmentLine."VAT %") = 0 then
-                        ExentAmount += PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity
-                    else begin
-                        VATAmount += (PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity) * SalesShipmentLine."VAT %" / 100;
-                        NetAmount += (PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity);
-                    end;
-            until PostedAssemblyLine.Next() = 0;
+        repeat
+            if PostedAssemblyLine."Unit Cost" <> 0 then
+                if (SalesShipmentLine."VAT %") = 0 then
+                    ExentAmount += PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity
+                else begin
+                    VATAmount += (PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity) * SalesShipmentLine."VAT %" / 100;
+                    NetAmount += (PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity);
+                end;
+        until PostedAssemblyLine.Next() = 0;
+        */
         IsHandled := true
     end;
 
