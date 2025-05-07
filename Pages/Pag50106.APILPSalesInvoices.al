@@ -697,7 +697,13 @@ page 50106 "APILP - Sales Invoices"
                         RegisterFieldSet(Rec.FieldNo("FJH.Electronic Shipment"));
                     end;
                 }
-                field(fiscalDocumentNo; TmpFiscalDocNo)
+                field(statusAuthorization; Rec."FJH.Fiscal Authorization")
+                {
+                    Caption = 'Status Authorization', Comment = 'ESM=Estado de autorización';
+                    Editable = false;
+                }
+
+                field(fiscalDocumentNo; Rec."FJH.Fiscal Document No.")
                 {
                     Editable = false;
                     Caption = 'Fiscal Document No.';
@@ -842,25 +848,12 @@ page 50106 "APILP - Sales Invoices"
         InvoiceClosedErr: Label 'The invoice is closed. The corrective credit memo will not be applied to the invoice.';
         InvoicePartiallyPaidErr: Label 'The invoice is partially paid or credited. The corrective credit memo may not be fully closed by the invoice.';
         HasWritePermissionForDraft: Boolean;
-        TmpFiscalDocNo: Code[35];
 
     local procedure SetCalculatedFields()
     begin
         Rec.LoadFields("No.", "Currency Code", "Amount Including VAT", Posted, Status);
         GetRemainingAmount();
         CurrencyCodeTxt := GraphMgtGeneralTools.TranslateNAVCurrencyCodeToCurrencyCode(LCYCurrencyCode, Rec."Currency Code");
-
-        //Get TmpFiscalDocNo
-        if Rec.Posted then
-            TmpFiscalDocNo := GetTmpFiscalDocNo(Rec."No.");
-    end;
-
-    local procedure GetTmpFiscalDocNo(DocumentNo: Code[20]): Code[35]
-    var
-        SalesInvoiceHeader: Record "Sales Invoice Header";
-    begin
-        if SalesInvoiceHeader.Get(DocumentNo) then
-            exit(SalesInvoiceHeader."FJH.Fiscal Document No.");
     end;
 
     local procedure ClearCalculatedFields()
@@ -868,7 +861,6 @@ page 50106 "APILP - Sales Invoices"
         Clear(InvoiceDiscountAmount);
         Clear(DiscountAmountSet);
         Clear(RemainingAmountVar);
-        Clear(TmpFiscalDocNo);  //TmpFiscalDocNo
         TempFieldBuffer.DeleteAll();
     end;
 

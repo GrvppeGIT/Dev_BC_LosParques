@@ -620,7 +620,13 @@ page 50115 "APILP - Sales Cr. Memo"
                         RegisterFieldSet(Rec.FieldNo("FJH.Electronic Shipment"));
                     end;
                 }
-                field(fiscalDocumentNo; TmpFiscalDocNo)
+                field(statusAuthorization; Rec."FJH.Fiscal Authorization")
+                {
+                    Caption = 'Status Authorization', Comment = 'ESM=Estado de autorización';
+                    Editable = false;
+                }
+
+                field(fiscalDocumentNo; Rec."FJH.Fiscal Document No.")
                 {
                     Editable = false;
                     Caption = 'Fiscal Document No.';
@@ -747,25 +753,12 @@ page 50115 "APILP - Sales Cr. Memo"
         DueDateSet: Boolean;
         DueDateVar: Date;
         HasWritePermissionForDraft: Boolean;
-        TmpFiscalDocNo: Code[35];
 
     local procedure SetCalculatedFields()
     begin
         Rec.LoadFields("Applies-to Doc. Type", "Currency Code");
         SetInvoiceId();
         CurrencyCodeTxt := GraphMgtGeneralTools.TranslateNAVCurrencyCodeToCurrencyCode(LCYCurrencyCode, Rec."Currency Code");
-
-        //Get TmpFiscalDocNo
-        if Rec.Posted then
-            TmpFiscalDocNo := GetTmpFiscalDocNo(Rec."No.");
-    end;
-
-    local procedure GetTmpFiscalDocNo(DocumentNo: Code[20]): Code[35]
-    var
-        SalesCrMemoHeader: Record "Sales Cr.Memo Header";
-    begin
-        if SalesCrMemoHeader.Get(DocumentNo) then
-            exit(SalesCrMemoHeader."FJH.Fiscal Document No.");
     end;
 
     local procedure ClearCalculatedFields()
@@ -774,7 +767,6 @@ page 50115 "APILP - Sales Cr. Memo"
         Clear(InvoiceNo);
         Clear(InvoiceDiscountAmount);
         Clear(DiscountAmountSet);
-        Clear(TmpFiscalDocNo);  //TmpFiscalDocNo
         TempFieldBuffer.DeleteAll();
     end;
 
