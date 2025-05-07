@@ -653,6 +653,14 @@ page 50108 "APILP - Sales Orders"
                         RegisterFieldSet(Rec.FieldNo(Rec."FJH.Has Watermark"));
                     end;
                 }
+                field(workDescription; WorkDescription)
+                {
+                    Caption = 'Work Description';
+                    trigger OnValidate()
+                    begin
+                        //RegisterFieldSet(Rec.FieldNo("FJH Work Description"));
+                    end;
+                }
                 part(attachments; "APIV2 - Attachments")
                 {
                     Caption = 'Attachments';
@@ -698,6 +706,8 @@ page 50108 "APILP - Sales Orders"
 
         UpdateDiscount();
 
+        SetWorkDescription(Rec);
+
         SetCalculatedFields();
 
         exit(false);
@@ -710,6 +720,8 @@ page 50108 "APILP - Sales Orders"
 
         GraphMgtSalesOrderBuffer.PropagateOnModify(Rec, TempFieldBuffer);
         UpdateDiscount();
+
+        SetWorkDescription(Rec);
 
         SetCalculatedFields();
 
@@ -761,13 +773,14 @@ page 50108 "APILP - Sales Orders"
         PostingDateSet: Boolean;
         PostingDateVar: Date;
         HasWritePermission: Boolean;
-
+        WorkDescription: Text;
 
     local procedure SetCalculatedFields()
     begin
         CurrencyCodeTxt := GraphMgtGeneralTools.TranslateNAVCurrencyCodeToCurrencyCode(LCYCurrencyCode, Rec."Currency Code");
         PartialOrderShipping := (Rec."Shipping Advice" = Rec."Shipping Advice"::Partial);
         Rec."Assembly Id" := GetAssemblyOrderID(Rec);
+        GetWorkDescription(Rec);
     end;
 
     local procedure ClearCalculatedFields()
@@ -911,6 +924,36 @@ page 50108 "APILP - Sales Orders"
                 AssemblyID := AssemblyHeader.SystemId;
         end;
         exit(AssemblyID);
+    end;
+
+    local procedure GetWorkDescription(Rec: Record "Sales Order Entity Buffer")
+    var
+        SHeader: Record "Sales Header";
+        InStream: InStream;
+    begin
+        Clear(WorkDescription);
+        SHeader.Reset();
+        if SHeader.GetBySystemId(Rec.Id) then begin
+            SHeader.CalcFields(SHeader."Work Description");
+            //Rec."FJH Work Description" := SHeader."Work Description";
+            if SHeader."Work Description".HasValue() then begin
+                SHeader."Work Description".CreateInStream(InStream);
+                InStream.Read(WorkDescription);
+            end;
+        end;
+    end;
+
+    local procedure SetWorkDescription(Rec: Record "Sales Order Entity Buffer")
+    var
+        SHeader: Record "Sales Header";
+        OutStream: OutStream;
+    begin
+        SHeader.Reset();
+        if SHeader.GetBySystemId(Rec.Id) then begin
+            SHeader."Work Description".CreateOutStream(OutStream);
+            OutStream.WriteText(WorkDescription);
+            SHeader.Modify();
+        end;
     end;
 
     [ServiceEnabled]

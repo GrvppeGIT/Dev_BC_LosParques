@@ -2,6 +2,7 @@ namespace FJH.API.LPCustom;
 
 using Microsoft.Finance.GeneralLedger.Ledger;
 using Microsoft.API.V2;
+using Microsoft.Projects.Project.Ledger;
 
 page 50114 "APILP - G/L Entries"
 {
@@ -140,6 +141,10 @@ page 50114 "APILP - G/L Entries"
     trigger OnAfterGetRecord()
     begin
         GLRegNo := getGLRegisterNo(Rec);
+        //Workaround to get the Job Task No. for missing info in GL entries.
+        if Rec."Job No." <> '' then
+            if Rec."FJH.Job Task No." = '' then
+                Rec."FJH.Job Task No." := GetTaskNofromGLEntry(Rec."Entry No.", Rec."Job No.");
     end;
 
     var
@@ -156,5 +161,19 @@ page 50114 "APILP - G/L Entries"
         if GLRegister.FindFirst() then
             GLRegisterNo := GLRegister."No.";
         exit(GLRegisterNo);
+    end;
+
+    local procedure GetTaskNofromGLEntry(EntryNo: Integer; JobNo: Code[20]): Code[20]
+    var
+        JobEntries: Record "Job Ledger Entry";
+        JobTaskNo: Code[20];
+    begin
+        JobTaskNo := '';
+        JobEntries.Reset();
+        JobEntries.SetRange("Job No.", JobNo);
+        JobEntries.SetRange("Ledger Entry No.", EntryNo);
+        if JobEntries.FindFirst() then
+            JobTaskNo := JobEntries."Job Task No.";
+        exit(JobTaskNo);
     end;
 }

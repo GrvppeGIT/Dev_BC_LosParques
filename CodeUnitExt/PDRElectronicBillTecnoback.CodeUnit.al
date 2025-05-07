@@ -29,11 +29,11 @@ codeunit 50120 PDRElectronicBillTecnoback
                     JsonAPIObjectDetalle.add('NmbItem', FJHElectBillFunctions.SpecialCharactersNew(PostedAssemblyLine.Description));
                     JsonAPIObjectDetalle.add('QtyItem', FJHElectBillFunctions.FormatDecimalNoToText(PostedAssemblyLine.Quantity));
                     JsonAPIObjectDetalle.add('UnmdItem', UnmdItem(SalesShipmentLine."Unit of Measure Code"));
-                    JsonAPIObjectDetalle.add('PrcItem', 0);
-                    JsonAPIObjectDetalle.add('MontoItem', 0);
+                    JsonAPIObjectDetalle.add('PrcItem', FJHElectBillFunctions.FormatDecimalNoToText(0.000001));
+                    JsonAPIObjectDetalle.add('MontoItem', FJHElectBillFunctions.FormatDecimalNoToText(0));
                     //JsonAPIObjectDetalle.add('PrcItem', FORMAT(PostedAssemblyLine."Unit Cost", 0, '<Integer>'));
                     //JsonAPIObjectDetalle.add('MontoItem', FORMAT(PostedAssemblyLine."Unit Cost" * PostedAssemblyLine.Quantity, 0, '<Integer>'));
-                    JsonAPIObjectDetalle.add('NroLinDet', FORMAT(I));
+                    JsonAPIObjectDetalle.add('NroLinDet', FJHElectBillFunctions.FormatDecimalNoToText(I));
                     I += 1;
                     JsonAPIArray.add(JsonAPIObjectDetalle);
                 end
