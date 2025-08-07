@@ -54,8 +54,9 @@ codeunit 50102 "FJH CT-Fill Export Buffer"
         BankAccount.Get(TempGenJnlLine."Bal. Account No.");
         BankAccount.GetBankExportImportSetup(BankExportImportSetup);
         BankExportImportSetup.TestField("Check Export Codeunit");
-        TempGenJnlLine.DeletePaymentFileBatchErrors();
+        //TempGenJnlLine.DeletePaymentFileBatchErrors();
         repeat
+            TempGenJnlLine.DeletePaymentFileBatchErrors();
             CODEUNIT.Run(BankExportImportSetup."Check Export Codeunit", TempGenJnlLine);
             if TempGenJnlLine."Bal. Account No." <> BankAccount."No." then
                 TempGenJnlLine.InsertPaymentFileError(SameBankErr);
